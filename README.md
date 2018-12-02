@@ -20,7 +20,6 @@ pod 'NetworkUtils'
 ## Author
 
 WyattMufson, wyatt@ryucoin.com
-Thanks to the tutorial - [How to create a pod](https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18)
 
 ### Update Pod
 
