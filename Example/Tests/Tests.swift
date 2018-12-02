@@ -3,6 +3,8 @@ import NetworkUtils
 
 class Tests: XCTestCase {
     
+    let networkUtils = NetworkUtils.shared
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,11 +20,27 @@ class Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+    func testHTTPGET() {
+        let expectation = XCTestExpectation(description: "HTTP GET request")
+        networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:], completionClosure: {data in
+            if data == nil {
+                XCTFail("Data was nil")
+            } else {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+                    guard let status = json["status"] as? String else {
+                        XCTFail()
+                        expectation.fulfill()
+                        return
+                    }
+                    XCTAssert(status == "success")
+                } catch let parseError as NSError {
+                    XCTFail("JSON Error \(parseError.localizedDescription)")
+                }
+            }
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 10.0)
     }
     
 }
