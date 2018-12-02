@@ -10,7 +10,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-[https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18](How to create a pod)
+[How to create a pod](https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18)
 
 ### Installation
 
