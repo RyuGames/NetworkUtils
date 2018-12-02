@@ -1,9 +1,9 @@
 {
   "name": "NetworkUtils",
   "version": "0.1.0",
-  "summary": "A short description of NetworkUtils.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/WyattMufson/NetworkUtils",
+  "summary": "Swift package for handling HTTP requests",
+  "description": "NetworkUtils is a simple package to handle HTTP requests.",
+  "homepage": "https://github.com/Ryucoin/NetworkUtils",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,18 @@
     "WyattMufson": "wyatt@ryucoin.com"
   },
   "source": {
-    "git": "https://github.com/WyattMufson/NetworkUtils.git",
+    "git": "https://github.com/Ryucoin/NetworkUtils.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/officialryucoin",
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
-  "source_files": "NetworkUtils/Classes/**/*"
+  "swift_version": "4.2",
+  "source_files": "NetworkUtils/Classes/**/*",
+  "dependencies": {
+    "PromisesSwift": [
+
+    ]
+  }
 }

@@ -22,24 +22,23 @@ class Tests: XCTestCase {
     
     func testHTTPGET() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
-        networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:], completionClosure: {data in
-            if data == nil {
-                XCTFail("Data was nil")
-            } else {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
-                    guard let status = json["status"] as? String else {
-                        XCTFail()
-                        expectation.fulfill()
-                        return
-                    }
-                    XCTAssert(status == "success")
-                } catch let parseError as NSError {
-                    XCTFail("JSON Error \(parseError.localizedDescription)")
+        networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:]).then {(data) in
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                guard let status = json["status"] as? String else {
+                    XCTFail()
+                    expectation.fulfill()
+                    return
                 }
+                XCTAssert(status == "success")
+            } catch let parseError as NSError {
+                XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-        })
+        }.catch {(error) in
+            XCTFail(error.localizedDescription)
+            expectation.fulfill()
+        }
         wait(for: [expectation], timeout: 10.0)
     }
     

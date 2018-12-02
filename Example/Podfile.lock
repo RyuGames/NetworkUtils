@@ -1,16 +1,28 @@
 PODS:
-  - NetworkUtils (0.1.0)
+  - NetworkUtils (0.1.0):
+    - PromisesSwift
+  - PromisesObjC (1.2.4)
+  - PromisesSwift (1.2.4):
+    - PromisesObjC (= 1.2.4)
 
 DEPENDENCIES:
   - NetworkUtils (from `../`)
+  - PromisesSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PromisesObjC
+    - PromisesSwift
 
 EXTERNAL SOURCES:
   NetworkUtils:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NetworkUtils: 0633a87e019ee621b1803edad12a46c7f27736ca
+  NetworkUtils: 03ec74ace61bef889eca6b6e38a50251c6f5bdfb
+  PromisesObjC: 4a3f2e30a0eb793e9bbb32cd367b625d4a14de5a
+  PromisesSwift: 8e1d2cdbc3cafb4f09d4b82df12f645bc19ab64e
 
-PODFILE CHECKSUM: 258b03bb725a70a25ce5122e03cff8cc56360ca2
+PODFILE CHECKSUM: fde2bb0b3165c5a513bfa186f765694de64766a2
 
 COCOAPODS: 1.5.3

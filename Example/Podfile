@@ -1,6 +1,8 @@
 use_frameworks!
+platform :ios, '12.0'
 target 'NetworkUtils_Example' do
   pod 'NetworkUtils', :path => '../'
+  pod 'PromisesSwift'
 
   target 'NetworkUtils_Tests' do
     inherit! :search_paths
