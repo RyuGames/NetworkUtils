@@ -10,7 +10,7 @@ import Foundation
 public class NetworkUtils: NSObject {
     public static let shared = NetworkUtils()
     
-    public func httpMethod(urlLink:String, method:httpMethodType, params:Dictionary<String, String>, completionClosure: @escaping (_ data:Data?) -> ()){
+    public func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any], completionClosure: @escaping (_ data:Data?) -> ()){
         let url = URL(string: urlLink)
         var request = URLRequest(url: url!)
         let count = params.keys.count
@@ -24,7 +24,7 @@ public class NetworkUtils: NSObject {
                 
                 for i in 0..<count {
                     let name = keys[i]
-                    let value = params[name]!
+                    let value = "\(params[name]!)"
                     
                     let queryItem = URLQueryItem(name: name, value: value)
                     queryItems.append(queryItem)
