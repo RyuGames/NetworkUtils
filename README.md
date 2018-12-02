@@ -27,3 +27,25 @@ WyattMufson, wyatt@ryucoin.com
 pod trunk push NetworkUtils.podspec
 
 ```
+
+## Example Usage
+
+```swift
+let networkUtils = NetworkUtils.shared
+
+networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:], completionClosure: {data in
+    if data == nil {
+        print("Data was nil")
+    } else {
+        do {
+            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            guard let status = json["status"] as? String else {
+                return
+            }
+            print(status)
+        } catch let parseError as NSError {
+            print("JSON Error \(parseError.localizedDescription)")
+        }
+    }
+})
+```
