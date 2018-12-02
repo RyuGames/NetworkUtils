@@ -1,16 +1,16 @@
 PODS:
-  - NetworkManager (0.1.0)
+  - NetworkUtils (0.1.0)
 
 DEPENDENCIES:
-  - NetworkManager (from `../`)
+  - NetworkUtils (from `../`)
 
 EXTERNAL SOURCES:
-  NetworkManager:
+  NetworkUtils:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NetworkManager: d434ce32b8dd781da6753112813996f808c0ba2a
+  NetworkUtils: 0633a87e019ee621b1803edad12a46c7f27736ca
 
-PODFILE CHECKSUM: 4e7525fd758d06222f0e13555048e0473d24da1d
+PODFILE CHECKSUM: 258b03bb725a70a25ce5122e03cff8cc56360ca2
 
 COCOAPODS: 1.5.3

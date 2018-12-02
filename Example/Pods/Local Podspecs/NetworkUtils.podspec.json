@@ -1,0 +1,22 @@
+{
+  "name": "NetworkUtils",
+  "version": "0.1.0",
+  "summary": "A short description of NetworkUtils.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/WyattMufson/NetworkUtils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "WyattMufson": "wyatt@ryucoin.com"
+  },
+  "source": {
+    "git": "https://github.com/WyattMufson/NetworkUtils.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NetworkUtils/Classes/**/*"
+}

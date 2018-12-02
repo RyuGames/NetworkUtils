@@ -1,11 +1,8 @@
 use_frameworks!
+target 'NetworkUtils_Example' do
+  pod 'NetworkUtils', :path => '../'
 
-target 'NetworkManager_Example' do
-  pod 'NetworkManager', :path => '../'
-
-  target 'NetworkManager_Tests' do
+  target 'NetworkUtils_Tests' do
     inherit! :search_paths
-
-    
   end
 end

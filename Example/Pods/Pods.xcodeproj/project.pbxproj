@@ -7,127 +7,141 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09A4B9BB3F2E2EEEDC885214FFEF1DB2 /* NetworkManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6442661CE5056729BE9840FD65926BD2 /* NetworkManager-dummy.m */; };
-		0E122E8D9DBDB4A6CD0A00501BAA617A /* NetworkManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6B431FC8E9C09E591A373D9BC0BCF7 /* NetworkManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20AB25D08CC8A43306532E29C3BC8D14 /* Pods-NetworkManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0BE336190FD8A77F0B45BC3C9BB4B58 /* Pods-NetworkManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20DFBCC34BE76A5C975FBBCB6A732502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		21B3216388B553B9F6ADCAB9014A37B0 /* Pods-NetworkManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42829B2F739D02CE9928656219699000 /* Pods-NetworkManager_Example-dummy.m */; };
-		4DCB8D53F106468D405AFA02CCA61C1F /* Pods-NetworkManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A532AB234C6852457642BAD026420BBA /* Pods-NetworkManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9222FFAD720ACBBED8985D266BB6CC87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		9543309E06164006660ADF68AFD4219F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		D04F3C7BDEF6CCA56588FDCEEAADDAAE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D4E05033FB3D5705DE910864340B9 /* NetworkManager.swift */; };
-		F0C5EBC803D864A01EC143FC96BB0445 /* Pods-NetworkManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEEB7C2B84F57C5917B65074CC35EC1 /* Pods-NetworkManager_Tests-dummy.m */; };
+		10B37BE309EB1C5CFFA15B296781765F /* NetworkUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B4A2CADDBD53803EB9744118A32873A /* NetworkUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73F3DA2A12D2E0FE73D6C965EB82CA89 /* Pods-NetworkUtils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0154B3AC6B705300B99D16766E2D622B /* Pods-NetworkUtils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9862C008DA6BB38CCD8A6A179A7D28A6 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A135A94C404B7855DDCEAAE1CD47EDF /* NetworkUtils.swift */; };
+		C3B2F9CD27645676A1FD441DF8DDCCA5 /* NetworkUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2328DB82AB88E79BDD9DF80FFE47C /* NetworkUtils-dummy.m */; };
+		CB1E464AB1F034B35121AFD04386C26C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		CEBD085C4ED25B80A1609A4942FEE0A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		DAFC014B5ED24B297E9D6DC540B21C41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		E96045A561C4498B81153E0F5323704E /* Pods-NetworkUtils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 322D1A9D9335D08777715D565C8EE24A /* Pods-NetworkUtils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD2618695BC1D479D34CE83E35D5550 /* Pods-NetworkUtils_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95255413EF352C464775F11BEA50AC8A /* Pods-NetworkUtils_Example-dummy.m */; };
+		FA1C5C77F772001AF44C0855B5ADFFEA /* Pods-NetworkUtils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9422E046C164287F265AAAC5DD500B6 /* Pods-NetworkUtils_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		467012A5C7AE6068AAEBA2E1A95C6663 /* PBXContainerItemProxy */ = {
+		AA9EB64FD8381D640663CDB8216F581A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A50D669412B491896E6D09B288B6409C;
-			remoteInfo = "Pods-NetworkManager_Example";
+			remoteGlobalIDString = CF2EA96AB7B302010E72F2FCF045E2F9;
+			remoteInfo = "Pods-NetworkUtils_Example";
 		};
-		9760E30656E2F770D934C5A520DA0A78 /* PBXContainerItemProxy */ = {
+		BC29D2F0345E90A0507F89CC2BE83292 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 42CE90A0B7F66DAF4FDC279593575F33;
-			remoteInfo = NetworkManager;
+			remoteGlobalIDString = 11AF92DAD3FBEDC50AF35C662FDF2216;
+			remoteInfo = NetworkUtils;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0221F5434878E4C53A3B4C92C8D7FEA3 /* NetworkManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkManager-prefix.pch"; sourceTree = "<group>"; };
-		038268152F7089A787AA1EC645F23FFF /* Pods-NetworkManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkManager_Tests-resources.sh"; sourceTree = "<group>"; };
-		055FFD57C0139DB56DA68E80E4F56D73 /* Pods-NetworkManager_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkManager_Example-resources.sh"; sourceTree = "<group>"; };
-		135FEDF9426F86038C7904F09EF5F6ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16E60A88687D9E3EDCAB5A9C7EC3625F /* Pods_NetworkManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CB45B84980045704E049AEE6BB1FA93 /* Pods-NetworkManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetworkManager_Tests.modulemap"; sourceTree = "<group>"; };
-		42829B2F739D02CE9928656219699000 /* Pods-NetworkManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkManager_Example-dummy.m"; sourceTree = "<group>"; };
-		46EEAD890335D20B7F7AC6B6CB431862 /* Pods-NetworkManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkManager_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4E4D5D70649B10902C12B582F4295716 /* Pods-NetworkManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4E6B431FC8E9C09E591A373D9BC0BCF7 /* NetworkManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkManager-umbrella.h"; sourceTree = "<group>"; };
-		4F49ACC71055702AD2869A55BE684120 /* NetworkManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NetworkManager.modulemap; sourceTree = "<group>"; };
+		0154B3AC6B705300B99D16766E2D622B /* Pods-NetworkUtils_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetworkUtils_Example-umbrella.h"; sourceTree = "<group>"; };
+		0897AF609B525AB137763C6E8987FFD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09FD0ACFCC8B62574EB19C9E3360C1D7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1EC2328DB82AB88E79BDD9DF80FFE47C /* NetworkUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NetworkUtils-dummy.m"; sourceTree = "<group>"; };
+		2A135A94C404B7855DDCEAAE1CD47EDF /* NetworkUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkUtils.swift; path = NetworkUtils/Classes/NetworkUtils.swift; sourceTree = "<group>"; };
+		314E3B1E231CD03C3D7617389C2BAB12 /* Pods-NetworkUtils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkUtils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		322D1A9D9335D08777715D565C8EE24A /* Pods-NetworkUtils_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetworkUtils_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3576A20AD0B0DF0643BD82942E7EF6D4 /* Pods_NetworkUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetworkUtils_Tests.framework; path = "Pods-NetworkUtils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F839FB9BBE5032AE7AF0CFFC712578A /* Pods-NetworkUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		50699A43344478D6FE3A7ECF13806249 /* Pods-NetworkUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
+		509C4C1D820AF80644AFB8517D234D63 /* Pods-NetworkUtils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetworkUtils_Example.modulemap"; sourceTree = "<group>"; };
+		5215F8AA84D00BFC2615C0EDEB24641F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		63C5B0CE159EF23B0AB8818A9CC07BC4 /* Pods-NetworkManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetworkManager_Example.modulemap"; sourceTree = "<group>"; };
-		6442661CE5056729BE9840FD65926BD2 /* NetworkManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager-dummy.m"; sourceTree = "<group>"; };
-		66D2FEE51DAB377978CBCBD4A8E79872 /* Pods-NetworkManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		738D4E05033FB3D5705DE910864340B9 /* NetworkManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = NetworkManager/Classes/NetworkManager.swift; sourceTree = "<group>"; };
-		7849304C14A5E01BFC9536189048502A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7E742ED781D0DE7654AB869701232019 /* NetworkManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NetworkManager.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A532AB234C6852457642BAD026420BBA /* Pods-NetworkManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetworkManager_Example-umbrella.h"; sourceTree = "<group>"; };
-		A5946107902C58C5331E695294E4DE45 /* Pods-NetworkManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AAC60787B44B9D44C401A1D9F9F4FB07 /* NetworkManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = NetworkManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AE73EF775B6BB842597E204B30078C32 /* Pods_NetworkManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B96773A46AEE2A57E6ABAF80E417C9B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF5693326688D53F31D5E6F5D04405A8 /* Pods-NetworkManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C0BE336190FD8A77F0B45BC3C9BB4B58 /* Pods-NetworkManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetworkManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C199C4DB3A492AF0E64171018AC3E35D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C841D60C0FCF6610E641A17DD97D05F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF0E26138FF58A4846EDEF7F96AA36E /* Pods-NetworkManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D08E206472D853540008AE1CED172A56 /* Pods-NetworkManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		DEE2B6BE06979372400B89233B60CF75 /* Pods-NetworkManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EA9F91DADC8374B128FBD7EC2025BEB3 /* Pods-NetworkManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EDEEB7C2B84F57C5917B65074CC35EC1 /* Pods-NetworkManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkManager_Tests-dummy.m"; sourceTree = "<group>"; };
-		EE2CF6BB89C6589D22968855939E033D /* Pods-NetworkManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F090E0A5F7E0FB46A9AF11EC57939387 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5CA073D5CE0CF5A1C18004541B53C3E3 /* Pods-NetworkUtils_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkUtils_Tests-resources.sh"; sourceTree = "<group>"; };
+		60C65B1C2177FAA9FEE0BB4BBEF1A26B /* NetworkUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NetworkUtils.xcconfig; sourceTree = "<group>"; };
+		671806CA2218758331B56E7707ECEBCA /* Pods-NetworkUtils_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkUtils_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6750F7009AE1A769FCD7A7054DD8A52A /* NetworkUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkUtils-prefix.pch"; sourceTree = "<group>"; };
+		70354C1EEC45F2337A83AB49D29A8DB9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826DDF23144DC428E9CB98DAC01D8BD3 /* NetworkUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NetworkUtils.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95255413EF352C464775F11BEA50AC8A /* Pods-NetworkUtils_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkUtils_Example-dummy.m"; sourceTree = "<group>"; };
+		9820D2C0415C452EA5DC6F5D2AF73667 /* Pods-NetworkUtils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkUtils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B4A2CADDBD53803EB9744118A32873A /* NetworkUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkUtils-umbrella.h"; sourceTree = "<group>"; };
+		B5D8FF74202046D6051FB081D2CA2055 /* NetworkUtils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = NetworkUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B74C260FD390EA1D1EAD8A3AA44B3799 /* Pods-NetworkUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B9E32D32A8914C4C17F800947E359187 /* NetworkUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NetworkUtils.framework; path = NetworkUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA13E17690C3358B2BF4EB1D1D7DAD9 /* Pods-NetworkUtils_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkUtils_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BE9E890F5CB7BFE97E896A2D63CC2407 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BFCB5018E3A42A1A359AB170515276A3 /* Pods-NetworkUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C3B18D732ED0C1ED1427DFFED08035BC /* Pods-NetworkUtils_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkUtils_Example-resources.sh"; sourceTree = "<group>"; };
+		E41F0CBA190FEA1B8A5DE39E8CD312CD /* Pods-NetworkUtils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetworkUtils_Tests.modulemap"; sourceTree = "<group>"; };
+		E54E9B710D10FF423F662FA09F3DAE06 /* Pods-NetworkUtils_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkUtils_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E9422E046C164287F265AAAC5DD500B6 /* Pods-NetworkUtils_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkUtils_Tests-dummy.m"; sourceTree = "<group>"; };
+		EE5B1736FD387D6A10CFB10DEFD8653B /* Pods_NetworkUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetworkUtils_Example.framework; path = "Pods-NetworkUtils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F864086465DBE6DAB126E271DA8B5390 /* Pods-NetworkUtils_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkUtils_Example-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C80B58D13CDD84630B12484FC47E6282 /* Frameworks */ = {
+		2C7407A52CE6DA4764F38BD98663520E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9222FFAD720ACBBED8985D266BB6CC87 /* Foundation.framework in Frameworks */,
+				CEBD085C4ED25B80A1609A4942FEE0A8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF0B01152C0BA0E99113A1A9774727FF /* Frameworks */ = {
+		5A091AD79F64DD58D375C37034DAE32B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DFBCC34BE76A5C975FBBCB6A732502 /* Foundation.framework in Frameworks */,
+				CB1E464AB1F034B35121AFD04386C26C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF95B659E72F1F7FDF3003E0578BCD71 /* Frameworks */ = {
+		9525060E4F5B7843AE34270DFF0E0E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9543309E06164006660ADF68AFD4219F /* Foundation.framework in Frameworks */,
+				DAFC014B5ED24B297E9D6DC540B21C41 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		261B677322729D2B4B8880B65EE80726 /* Products */ = {
+		03DA34EA1C155C6A229EDF553447A45F /* Pods-NetworkUtils_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				135FEDF9426F86038C7904F09EF5F6ED /* NetworkManager.framework */,
-				16E60A88687D9E3EDCAB5A9C7EC3625F /* Pods_NetworkManager_Example.framework */,
-				AE73EF775B6BB842597E204B30078C32 /* Pods_NetworkManager_Tests.framework */,
+				70354C1EEC45F2337A83AB49D29A8DB9 /* Info.plist */,
+				E41F0CBA190FEA1B8A5DE39E8CD312CD /* Pods-NetworkUtils_Tests.modulemap */,
+				314E3B1E231CD03C3D7617389C2BAB12 /* Pods-NetworkUtils_Tests-acknowledgements.markdown */,
+				BBA13E17690C3358B2BF4EB1D1D7DAD9 /* Pods-NetworkUtils_Tests-acknowledgements.plist */,
+				E9422E046C164287F265AAAC5DD500B6 /* Pods-NetworkUtils_Tests-dummy.m */,
+				671806CA2218758331B56E7707ECEBCA /* Pods-NetworkUtils_Tests-frameworks.sh */,
+				5CA073D5CE0CF5A1C18004541B53C3E3 /* Pods-NetworkUtils_Tests-resources.sh */,
+				322D1A9D9335D08777715D565C8EE24A /* Pods-NetworkUtils_Tests-umbrella.h */,
+				3F839FB9BBE5032AE7AF0CFFC712578A /* Pods-NetworkUtils_Tests.debug.xcconfig */,
+				BFCB5018E3A42A1A359AB170515276A3 /* Pods-NetworkUtils_Tests.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-NetworkUtils_Tests";
+			path = "Target Support Files/Pods-NetworkUtils_Tests";
 			sourceTree = "<group>";
 		};
-		2EFAD534B1B70D0BC3F5106BB69DD72C /* Pods-NetworkManager_Example */ = {
+		23FB532240CB59077554FA66C5EE1178 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C841D60C0FCF6610E641A17DD97D05F5 /* Info.plist */,
-				63C5B0CE159EF23B0AB8818A9CC07BC4 /* Pods-NetworkManager_Example.modulemap */,
-				4E4D5D70649B10902C12B582F4295716 /* Pods-NetworkManager_Example-acknowledgements.markdown */,
-				D08E206472D853540008AE1CED172A56 /* Pods-NetworkManager_Example-acknowledgements.plist */,
-				42829B2F739D02CE9928656219699000 /* Pods-NetworkManager_Example-dummy.m */,
-				46EEAD890335D20B7F7AC6B6CB431862 /* Pods-NetworkManager_Example-frameworks.sh */,
-				055FFD57C0139DB56DA68E80E4F56D73 /* Pods-NetworkManager_Example-resources.sh */,
-				A532AB234C6852457642BAD026420BBA /* Pods-NetworkManager_Example-umbrella.h */,
-				CDF0E26138FF58A4846EDEF7F96AA36E /* Pods-NetworkManager_Example.debug.xcconfig */,
-				EE2CF6BB89C6589D22968855939E033D /* Pods-NetworkManager_Example.release.xcconfig */,
+				0897AF609B525AB137763C6E8987FFD6 /* Info.plist */,
+				826DDF23144DC428E9CB98DAC01D8BD3 /* NetworkUtils.modulemap */,
+				60C65B1C2177FAA9FEE0BB4BBEF1A26B /* NetworkUtils.xcconfig */,
+				1EC2328DB82AB88E79BDD9DF80FFE47C /* NetworkUtils-dummy.m */,
+				6750F7009AE1A769FCD7A7054DD8A52A /* NetworkUtils-prefix.pch */,
+				9B4A2CADDBD53803EB9744118A32873A /* NetworkUtils-umbrella.h */,
 			);
-			name = "Pods-NetworkManager_Example";
-			path = "Target Support Files/Pods-NetworkManager_Example";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NetworkUtils";
+			sourceTree = "<group>";
+		};
+		58C4998E58802B8E5E75EBD0EFDBE167 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				BE9E890F5CB7BFE97E896A2D63CC2407 /* LICENSE */,
+				B5D8FF74202046D6051FB081D2CA2055 /* NetworkUtils.podspec */,
+				09FD0ACFCC8B62574EB19C9E3360C1D7 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -138,38 +152,54 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		75E60EB1272AC6B5BD6F0A4675BDEF72 /* Support Files */ = {
+		695C73B602AAB65CA4074FE5F2F52372 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C199C4DB3A492AF0E64171018AC3E35D /* Info.plist */,
-				4F49ACC71055702AD2869A55BE684120 /* NetworkManager.modulemap */,
-				7E742ED781D0DE7654AB869701232019 /* NetworkManager.xcconfig */,
-				6442661CE5056729BE9840FD65926BD2 /* NetworkManager-dummy.m */,
-				0221F5434878E4C53A3B4C92C8D7FEA3 /* NetworkManager-prefix.pch */,
-				4E6B431FC8E9C09E591A373D9BC0BCF7 /* NetworkManager-umbrella.h */,
+				B9E32D32A8914C4C17F800947E359187 /* NetworkUtils.framework */,
+				EE5B1736FD387D6A10CFB10DEFD8653B /* Pods_NetworkUtils_Example.framework */,
+				3576A20AD0B0DF0643BD82942E7EF6D4 /* Pods_NetworkUtils_Tests.framework */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NetworkManager";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A274A5CD4A917DC7FB0334A01FDF5E9 /* NetworkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2A135A94C404B7855DDCEAAE1CD47EDF /* NetworkUtils.swift */,
+				58C4998E58802B8E5E75EBD0EFDBE167 /* Pod */,
+				23FB532240CB59077554FA66C5EE1178 /* Support Files */,
+			);
+			name = NetworkUtils;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F046FCEBEFD1F8F54A1FE92B10A623DA /* Development Pods */,
+				EBB49D753F9A5BA159082C8531A276AC /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				261B677322729D2B4B8880B65EE80726 /* Products */,
-				83F3207E2418BA83DD385016033B1CA1 /* Targets Support Files */,
+				695C73B602AAB65CA4074FE5F2F52372 /* Products */,
+				C18916298AAB95929A8953F0A851845A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83F3207E2418BA83DD385016033B1CA1 /* Targets Support Files */ = {
+		AF2B86186857C15510F450F2FAE5EEE4 /* Pods-NetworkUtils_Example */ = {
 			isa = PBXGroup;
 			children = (
-				2EFAD534B1B70D0BC3F5106BB69DD72C /* Pods-NetworkManager_Example */,
-				C001A7DCB95E26F13A31557AC057732C /* Pods-NetworkManager_Tests */,
+				5215F8AA84D00BFC2615C0EDEB24641F /* Info.plist */,
+				509C4C1D820AF80644AFB8517D234D63 /* Pods-NetworkUtils_Example.modulemap */,
+				9820D2C0415C452EA5DC6F5D2AF73667 /* Pods-NetworkUtils_Example-acknowledgements.markdown */,
+				E54E9B710D10FF423F662FA09F3DAE06 /* Pods-NetworkUtils_Example-acknowledgements.plist */,
+				95255413EF352C464775F11BEA50AC8A /* Pods-NetworkUtils_Example-dummy.m */,
+				F864086465DBE6DAB126E271DA8B5390 /* Pods-NetworkUtils_Example-frameworks.sh */,
+				C3B18D732ED0C1ED1427DFFED08035BC /* Pods-NetworkUtils_Example-resources.sh */,
+				0154B3AC6B705300B99D16766E2D622B /* Pods-NetworkUtils_Example-umbrella.h */,
+				B74C260FD390EA1D1EAD8A3AA44B3799 /* Pods-NetworkUtils_Example.debug.xcconfig */,
+				50699A43344478D6FE3A7ECF13806249 /* Pods-NetworkUtils_Example.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-NetworkUtils_Example";
+			path = "Target Support Files/Pods-NetworkUtils_Example";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -180,49 +210,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C001A7DCB95E26F13A31557AC057732C /* Pods-NetworkManager_Tests */ = {
+		C18916298AAB95929A8953F0A851845A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B96773A46AEE2A57E6ABAF80E417C9B7 /* Info.plist */,
-				1CB45B84980045704E049AEE6BB1FA93 /* Pods-NetworkManager_Tests.modulemap */,
-				EA9F91DADC8374B128FBD7EC2025BEB3 /* Pods-NetworkManager_Tests-acknowledgements.markdown */,
-				66D2FEE51DAB377978CBCBD4A8E79872 /* Pods-NetworkManager_Tests-acknowledgements.plist */,
-				EDEEB7C2B84F57C5917B65074CC35EC1 /* Pods-NetworkManager_Tests-dummy.m */,
-				BF5693326688D53F31D5E6F5D04405A8 /* Pods-NetworkManager_Tests-frameworks.sh */,
-				038268152F7089A787AA1EC645F23FFF /* Pods-NetworkManager_Tests-resources.sh */,
-				C0BE336190FD8A77F0B45BC3C9BB4B58 /* Pods-NetworkManager_Tests-umbrella.h */,
-				A5946107902C58C5331E695294E4DE45 /* Pods-NetworkManager_Tests.debug.xcconfig */,
-				DEE2B6BE06979372400B89233B60CF75 /* Pods-NetworkManager_Tests.release.xcconfig */,
+				AF2B86186857C15510F450F2FAE5EEE4 /* Pods-NetworkUtils_Example */,
+				03DA34EA1C155C6A229EDF553447A45F /* Pods-NetworkUtils_Tests */,
 			);
-			name = "Pods-NetworkManager_Tests";
-			path = "Target Support Files/Pods-NetworkManager_Tests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D1C6257C2EEC37037B16D95792A443BC /* Pod */ = {
+		EBB49D753F9A5BA159082C8531A276AC /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F090E0A5F7E0FB46A9AF11EC57939387 /* LICENSE */,
-				AAC60787B44B9D44C401A1D9F9F4FB07 /* NetworkManager.podspec */,
-				7849304C14A5E01BFC9536189048502A /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		D840DB903D2773B91ED5F7038B58E8C5 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				738D4E05033FB3D5705DE910864340B9 /* NetworkManager.swift */,
-				D1C6257C2EEC37037B16D95792A443BC /* Pod */,
-				75E60EB1272AC6B5BD6F0A4675BDEF72 /* Support Files */,
-			);
-			name = NetworkManager;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F046FCEBEFD1F8F54A1FE92B10A623DA /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D840DB903D2773B91ED5F7038B58E8C5 /* NetworkManager */,
+				7A274A5CD4A917DC7FB0334A01FDF5E9 /* NetworkUtils */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -230,84 +230,84 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		13B25EA18C904ED6802BE226B4F59769 /* Headers */ = {
+		1B723E09E3FE83D66DFDFA1E016FE07F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DCB8D53F106468D405AFA02CCA61C1F /* Pods-NetworkManager_Example-umbrella.h in Headers */,
+				73F3DA2A12D2E0FE73D6C965EB82CA89 /* Pods-NetworkUtils_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F7767C2E2CDEE44CDED68DB9B3F2DE5 /* Headers */ = {
+		A8D910877AB5DA7FEF17726C47EE1CF2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E122E8D9DBDB4A6CD0A00501BAA617A /* NetworkManager-umbrella.h in Headers */,
+				E96045A561C4498B81153E0F5323704E /* Pods-NetworkUtils_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD44115A6E1AA1DA98FEC79269B01875 /* Headers */ = {
+		BF3B776D2C743329FBB383CF6009EC54 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AB25D08CC8A43306532E29C3BC8D14 /* Pods-NetworkManager_Tests-umbrella.h in Headers */,
+				10B37BE309EB1C5CFFA15B296781765F /* NetworkUtils-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		42CE90A0B7F66DAF4FDC279593575F33 /* NetworkManager */ = {
+		11AF92DAD3FBEDC50AF35C662FDF2216 /* NetworkUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA4DFFE63C1C7D8BBDF08D2288B3C674 /* Build configuration list for PBXNativeTarget "NetworkManager" */;
+			buildConfigurationList = D43782B8A031C720F4842E961E0C4CA3 /* Build configuration list for PBXNativeTarget "NetworkUtils" */;
 			buildPhases = (
-				35A0D5BBF20034674EBC9D24BF5E2E44 /* Sources */,
-				FF95B659E72F1F7FDF3003E0578BCD71 /* Frameworks */,
-				7F7767C2E2CDEE44CDED68DB9B3F2DE5 /* Headers */,
+				B754A20CC8DB608490FB7DA99C1B4564 /* Sources */,
+				9525060E4F5B7843AE34270DFF0E0E6D /* Frameworks */,
+				BF3B776D2C743329FBB383CF6009EC54 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NetworkManager;
-			productName = NetworkManager;
-			productReference = 135FEDF9426F86038C7904F09EF5F6ED /* NetworkManager.framework */;
+			name = NetworkUtils;
+			productName = NetworkUtils;
+			productReference = B9E32D32A8914C4C17F800947E359187 /* NetworkUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A50D669412B491896E6D09B288B6409C /* Pods-NetworkManager_Example */ = {
+		1D2A5531F55AE010859F0C6F19858A76 /* Pods-NetworkUtils_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDE6D87C7D83FE2ABC9F3EA517505F07 /* Build configuration list for PBXNativeTarget "Pods-NetworkManager_Example" */;
+			buildConfigurationList = F6D971272049917FABD550EB65244A5A /* Build configuration list for PBXNativeTarget "Pods-NetworkUtils_Tests" */;
 			buildPhases = (
-				26D3403264F45282159E3F8F854800E3 /* Sources */,
-				DF0B01152C0BA0E99113A1A9774727FF /* Frameworks */,
-				13B25EA18C904ED6802BE226B4F59769 /* Headers */,
+				0DCA52520897171D263B1437B5E71FFA /* Sources */,
+				5A091AD79F64DD58D375C37034DAE32B /* Frameworks */,
+				A8D910877AB5DA7FEF17726C47EE1CF2 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E60055EF8BFF57AEE658F4D80E14EABC /* PBXTargetDependency */,
+				6DFB45B2D78C9A02C89557A3155D4BF0 /* PBXTargetDependency */,
 			);
-			name = "Pods-NetworkManager_Example";
-			productName = "Pods-NetworkManager_Example";
-			productReference = 16E60A88687D9E3EDCAB5A9C7EC3625F /* Pods_NetworkManager_Example.framework */;
+			name = "Pods-NetworkUtils_Tests";
+			productName = "Pods-NetworkUtils_Tests";
+			productReference = 3576A20AD0B0DF0643BD82942E7EF6D4 /* Pods_NetworkUtils_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DEE7C5D496A88735EE94B34101C92D72 /* Pods-NetworkManager_Tests */ = {
+		CF2EA96AB7B302010E72F2FCF045E2F9 /* Pods-NetworkUtils_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C5339751BE9A18EE75E6D01DAD762AE /* Build configuration list for PBXNativeTarget "Pods-NetworkManager_Tests" */;
+			buildConfigurationList = 865ED417FACB6AE5312A2F57A3C26B7F /* Build configuration list for PBXNativeTarget "Pods-NetworkUtils_Example" */;
 			buildPhases = (
-				5FD03371DFAB49D505B94A6832B34D53 /* Sources */,
-				C80B58D13CDD84630B12484FC47E6282 /* Frameworks */,
-				FD44115A6E1AA1DA98FEC79269B01875 /* Headers */,
+				1D801F90B662AF530A6E4CA4C851B660 /* Sources */,
+				2C7407A52CE6DA4764F38BD98663520E /* Frameworks */,
+				1B723E09E3FE83D66DFDFA1E016FE07F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD7CA873E4BDFD150D9AAEE91C5D4D0B /* PBXTargetDependency */,
+				045224899ECF9900D8FF033FAF7BB02B /* PBXTargetDependency */,
 			);
-			name = "Pods-NetworkManager_Tests";
-			productName = "Pods-NetworkManager_Tests";
-			productReference = AE73EF775B6BB842597E204B30078C32 /* Pods_NetworkManager_Tests.framework */;
+			name = "Pods-NetworkUtils_Example";
+			productName = "Pods-NetworkUtils_Example";
+			productReference = EE5B1736FD387D6A10CFB10DEFD8653B /* Pods_NetworkUtils_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -317,12 +317,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1010;
-				TargetAttributes = {
-					42CE90A0B7F66DAF4FDC279593575F33 = {
-						LastSwiftMigration = 1010;
-					};
-				};
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -332,64 +327,64 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 261B677322729D2B4B8880B65EE80726 /* Products */;
+			productRefGroup = 695C73B602AAB65CA4074FE5F2F52372 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42CE90A0B7F66DAF4FDC279593575F33 /* NetworkManager */,
-				A50D669412B491896E6D09B288B6409C /* Pods-NetworkManager_Example */,
-				DEE7C5D496A88735EE94B34101C92D72 /* Pods-NetworkManager_Tests */,
+				11AF92DAD3FBEDC50AF35C662FDF2216 /* NetworkUtils */,
+				CF2EA96AB7B302010E72F2FCF045E2F9 /* Pods-NetworkUtils_Example */,
+				1D2A5531F55AE010859F0C6F19858A76 /* Pods-NetworkUtils_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26D3403264F45282159E3F8F854800E3 /* Sources */ = {
+		0DCA52520897171D263B1437B5E71FFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21B3216388B553B9F6ADCAB9014A37B0 /* Pods-NetworkManager_Example-dummy.m in Sources */,
+				FA1C5C77F772001AF44C0855B5ADFFEA /* Pods-NetworkUtils_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35A0D5BBF20034674EBC9D24BF5E2E44 /* Sources */ = {
+		1D801F90B662AF530A6E4CA4C851B660 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A4B9BB3F2E2EEEDC885214FFEF1DB2 /* NetworkManager-dummy.m in Sources */,
-				D04F3C7BDEF6CCA56588FDCEEAADDAAE /* NetworkManager.swift in Sources */,
+				EDD2618695BC1D479D34CE83E35D5550 /* Pods-NetworkUtils_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FD03371DFAB49D505B94A6832B34D53 /* Sources */ = {
+		B754A20CC8DB608490FB7DA99C1B4564 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C5EBC803D864A01EC143FC96BB0445 /* Pods-NetworkManager_Tests-dummy.m in Sources */,
+				C3B2F9CD27645676A1FD441DF8DDCCA5 /* NetworkUtils-dummy.m in Sources */,
+				9862C008DA6BB38CCD8A6A179A7D28A6 /* NetworkUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD7CA873E4BDFD150D9AAEE91C5D4D0B /* PBXTargetDependency */ = {
+		045224899ECF9900D8FF033FAF7BB02B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-NetworkManager_Example";
-			target = A50D669412B491896E6D09B288B6409C /* Pods-NetworkManager_Example */;
-			targetProxy = 467012A5C7AE6068AAEBA2E1A95C6663 /* PBXContainerItemProxy */;
+			name = NetworkUtils;
+			target = 11AF92DAD3FBEDC50AF35C662FDF2216 /* NetworkUtils */;
+			targetProxy = BC29D2F0345E90A0507F89CC2BE83292 /* PBXContainerItemProxy */;
 		};
-		E60055EF8BFF57AEE658F4D80E14EABC /* PBXTargetDependency */ = {
+		6DFB45B2D78C9A02C89557A3155D4BF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = NetworkManager;
-			target = 42CE90A0B7F66DAF4FDC279593575F33 /* NetworkManager */;
-			targetProxy = 9760E30656E2F770D934C5A520DA0A78 /* PBXContainerItemProxy */;
+			name = "Pods-NetworkUtils_Example";
+			target = CF2EA96AB7B302010E72F2FCF045E2F9 /* Pods-NetworkUtils_Example */;
+			targetProxy = AA9EB64FD8381D640663CDB8216F581A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12FC296CD2F2C251C6D93F76D4711EE2 /* Debug */ = {
+		66CF5E764EB049A5B25B5BA7CC0D017A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5946107902C58C5331E695294E4DE45 /* Pods-NetworkManager_Tests.debug.xcconfig */;
+			baseConfigurationReference = BFCB5018E3A42A1A359AB170515276A3 /* Pods-NetworkUtils_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -401,12 +396,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetworkManager_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetworkUtils_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetworkManager_Tests/Pods-NetworkManager_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-NetworkUtils_Tests/Pods-NetworkUtils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -414,146 +409,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		341722C95A9CBBF865E09DDD95CE002A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E742ED781D0DE7654AB869701232019 /* NetworkManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NetworkManager/NetworkManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NetworkManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NetworkManager/NetworkManager.modulemap";
-				PRODUCT_MODULE_NAME = NetworkManager;
-				PRODUCT_NAME = NetworkManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		53565EAD5B0AB43F41654FA4179D7F29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2CF6BB89C6589D22968855939E033D /* Pods-NetworkManager_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetworkManager_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetworkManager_Example/Pods-NetworkManager_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		67CFB482FE8AB94F41587841C5213894 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E742ED781D0DE7654AB869701232019 /* NetworkManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NetworkManager/NetworkManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NetworkManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NetworkManager/NetworkManager.modulemap";
-				PRODUCT_MODULE_NAME = NetworkManager;
-				PRODUCT_NAME = NetworkManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		713092270DEA9F7D71E3430F8A1D274F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDF0E26138FF58A4846EDEF7F96AA36E /* Pods-NetworkManager_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetworkManager_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetworkManager_Example/Pods-NetworkManager_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -618,9 +479,9 @@
 			};
 			name = Debug;
 		};
-		9AF5A82966C22C9B240BE7FB8630FE8C /* Release */ = {
+		9BAC66D5176A0D31D349B86876CBB429 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEE2B6BE06979372400B89233B60CF75 /* Pods-NetworkManager_Tests.release.xcconfig */;
+			baseConfigurationReference = 3F839FB9BBE5032AE7AF0CFFC712578A /* Pods-NetworkUtils_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -632,12 +493,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetworkManager_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetworkUtils_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetworkManager_Tests/Pods-NetworkManager_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-NetworkUtils_Tests/Pods-NetworkUtils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -646,11 +507,77 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		A39EA9004DA829C5319DEB07CB4D13A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B74C260FD390EA1D1EAD8A3AA44B3799 /* Pods-NetworkUtils_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetworkUtils_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NetworkUtils_Example/Pods-NetworkUtils_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE25170B8A50D53EF26F3196887D8B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60C65B1C2177FAA9FEE0BB4BBEF1A26B /* NetworkUtils.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NetworkUtils/NetworkUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NetworkUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NetworkUtils/NetworkUtils.modulemap";
+				PRODUCT_MODULE_NAME = NetworkUtils;
+				PRODUCT_NAME = NetworkUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -706,8 +633,75 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CD394C653438A67571FB75505D9F3FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60C65B1C2177FAA9FEE0BB4BBEF1A26B /* NetworkUtils.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NetworkUtils/NetworkUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NetworkUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NetworkUtils/NetworkUtils.modulemap";
+				PRODUCT_MODULE_NAME = NetworkUtils;
+				PRODUCT_NAME = NetworkUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F0AECEC0568F706887786ECDE88D4CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50699A43344478D6FE3A7ECF13806249 /* Pods-NetworkUtils_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetworkUtils_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NetworkUtils_Example/Pods-NetworkUtils_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -723,29 +717,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C5339751BE9A18EE75E6D01DAD762AE /* Build configuration list for PBXNativeTarget "Pods-NetworkManager_Tests" */ = {
+		865ED417FACB6AE5312A2F57A3C26B7F /* Build configuration list for PBXNativeTarget "Pods-NetworkUtils_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12FC296CD2F2C251C6D93F76D4711EE2 /* Debug */,
-				9AF5A82966C22C9B240BE7FB8630FE8C /* Release */,
+				A39EA9004DA829C5319DEB07CB4D13A4 /* Debug */,
+				F0AECEC0568F706887786ECDE88D4CF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA4DFFE63C1C7D8BBDF08D2288B3C674 /* Build configuration list for PBXNativeTarget "NetworkManager" */ = {
+		D43782B8A031C720F4842E961E0C4CA3 /* Build configuration list for PBXNativeTarget "NetworkUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67CFB482FE8AB94F41587841C5213894 /* Debug */,
-				341722C95A9CBBF865E09DDD95CE002A /* Release */,
+				AE25170B8A50D53EF26F3196887D8B42 /* Debug */,
+				CD394C653438A67571FB75505D9F3FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDE6D87C7D83FE2ABC9F3EA517505F07 /* Build configuration list for PBXNativeTarget "Pods-NetworkManager_Example" */ = {
+		F6D971272049917FABD550EB65244A5A /* Build configuration list for PBXNativeTarget "Pods-NetworkUtils_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				713092270DEA9F7D71E3430F8A1D274F /* Debug */,
-				53565EAD5B0AB43F41654FA4179D7F29 /* Release */,
+				9BAC66D5176A0D31D349B86876CBB429 /* Debug */,
+				66CF5E764EB049A5B25B5BA7CC0D017A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
