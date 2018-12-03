@@ -4,11 +4,17 @@
 [![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 
-## Example
+## Author
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+[WyattMufson](wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
 
-### Installation
+## Overview
+
+NetworkUtils is a package for implementing HTTP network requests in Swift for iOS. The goal of the project is to replicate the funcitonality of the [axios](https://github.com/axios/axios) npm package used in nodejs.
+
+It is built off of the [Foundation URL Loading System](https://developer.apple.com/documentation/foundation/url_loading_system) (similar to [AFNetworking](https://github.com/AFNetworking/AFNetworking)). NetworkUtils uses Google's [Promises](https://github.com/google/promises) library for promise support.
+
+## Installation
 
 NetworkUtils is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following lines to your Podfile:
@@ -17,35 +23,24 @@ it, simply add the following lines to your Podfile:
 pod 'NetworkUtils'
 ```
 
-## Author
-
-WyattMufson, wyatt@ryucoin.com
-
-### Update Pod
-
-```ruby
-pod trunk push NetworkUtils.podspec
-
-```
+And run ```pod install```.
 
 ## Example Usage
 
 ```swift
 let networkUtils = NetworkUtils.shared
 
-networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:], completionClosure: {data in
-    if data == nil {
-        print("Data was nil")
-    } else {
-        do {
-            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
-            guard let status = json["status"] as? String else {
-                return
-            }
-            print(status)
-        } catch let parseError as NSError {
-            print("JSON Error \(parseError.localizedDescription)")
+networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:]).then {(data) in
+    do {
+        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        guard let status = json["status"] as? String else {
+            return
         }
+        print(status) // "success"
+    } catch let parseError as NSError {
+        print("JSON Error \(parseError.localizedDescription)")
     }
-})
+}.catch {(error) in
+    print("Error: \(error.localizedDescription)")
+}
 ```
