@@ -16,4 +16,5 @@ DerivedData
 *.ipa
 .bundle
 Example/Pods/
+fastlane/report.xml
 fastlane/test_output
