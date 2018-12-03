@@ -10,7 +10,7 @@ Swift package for handling HTTP requests
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
-[![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
+[![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](./LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 
 ## Author
