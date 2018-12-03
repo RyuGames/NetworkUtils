@@ -45,3 +45,10 @@ networkUtils.get("http://ip-api.com/json").then {(data) in
     print("Error: \(error.localizedDescription)")
 }
 ```
+
+## Testing
+
+NetworkUtils uses [fastlane](https://fastlane.tools) for testing automation. Run the tests with:
+```
+fastlane tests
+```
