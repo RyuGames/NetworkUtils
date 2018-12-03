@@ -36,8 +36,9 @@ And run ```pod install```.
 
 ## Example Usage
 
+### HTTP Requests
 ```swift
-let networkUtils = NetworkUtils.shared
+let networkUtils = NetworkUtils.main
 
 networkUtils.get("http://ip-api.com/json").then {(data) in
     print("Data found: \(data)")
@@ -46,9 +47,29 @@ networkUtils.get("http://ip-api.com/json").then {(data) in
 }
 ```
 
+### Reachability
+```swift
+let reachability = NetworkUtils.reachability
+
+switch reachability.connection {
+case .wifi:
+    print("Reachable via WiFi")
+case .cellular:
+    print("Reachable via Cellular")
+case .none:
+    print("Not Reachable")
+}
+```
+
 ## Testing
 
 NetworkUtils uses [fastlane](https://fastlane.tools) for testing automation. Run the tests with:
 ```
 fastlane tests
+```
+
+## Updating the Pod
+
+```
+pod trunk push NetworkUtils.podspec
 ```
