@@ -3,7 +3,7 @@ import NetworkUtils
 
 class Tests: XCTestCase {
     
-    let networkUtils = NetworkUtils.shared
+    let networkUtils = NetworkUtils.main
     
     override func setUp() {
         super.setUp()
