@@ -12,7 +12,7 @@
 
 NetworkUtils is a package for implementing HTTP network requests in Swift for iOS. The goal of the project is to replicate the funcitonality of the [axios](https://github.com/axios/axios) npm package used in nodejs.
 
-It is built off of the [Foundation URL Loading System](https://developer.apple.com/documentation/foundation/url_loading_system) (similar to [AFNetworking](https://github.com/AFNetworking/AFNetworking)). NetworkUtils uses Google's [Promises](https://github.com/google/promises) library for promise support.
+It is built off of the [Foundation URL Loading System](https://developer.apple.com/documentation/foundation/url_loading_system) (similar to [Alamofire](https://github.com/Alamofire/Alamofire)). NetworkUtils uses Google's [Promises](https://github.com/google/promises) library for promise support.
 
 ## Installation
 
