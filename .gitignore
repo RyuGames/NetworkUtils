@@ -15,4 +15,5 @@ DerivedData
 *.hmap
 *.ipa
 .bundle
+Example/Pods/
 fastlane/test_output

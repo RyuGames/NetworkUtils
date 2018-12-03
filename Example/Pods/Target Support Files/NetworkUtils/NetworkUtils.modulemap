@@ -1,6 +1,0 @@
-framework module NetworkUtils {
-  umbrella header "NetworkUtils-umbrella.h"
-
-  export *
-  module * { export * }
-}
