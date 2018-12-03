@@ -9,7 +9,8 @@ import Foundation
 import Promises
 
 public class NetworkUtils: NSObject {
-    public static let shared = NetworkUtils()
+    public static let main = NetworkUtils()
+    public static let reachability = Reachability.shared
     
     public func post(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .POST, params: params)

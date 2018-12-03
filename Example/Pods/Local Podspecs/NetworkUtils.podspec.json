@@ -1,8 +1,7 @@
 {
   "name": "NetworkUtils",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "summary": "Swift package for handling HTTP requests",
-  "description": "NetworkUtils is a simple package to handle HTTP requests.",
   "homepage": "https://github.com/Ryucoin/NetworkUtils",
   "license": {
     "type": "MIT",
@@ -13,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/Ryucoin/NetworkUtils.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "social_media_url": "https://twitter.com/officialryucoin",
   "platforms": {

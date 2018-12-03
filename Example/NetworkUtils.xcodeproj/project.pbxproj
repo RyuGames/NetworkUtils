@@ -16,6 +16,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7F9B40EB21B43788001D8885 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B40EA21B43788001D8885 /* NetworkUtils.swift */; };
+		7FB4AE3821B56F8900A290EA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4AE3721B56F8900A290EA /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		6A8AB9F14BF98B61C1FE5421 /* Pods-NetworkUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkUtils_Tests/Pods-NetworkUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		722A16A5FA556212C5F77133 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7F9B40EA21B43788001D8885 /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		7FB4AE3721B56F8900A290EA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		80A8C01196A4BE0CE3BC2D86 /* Pods_NetworkUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB51C9B780BB599F3BCC51A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F3B306527DA75ADB16A8CDCB /* Pods-NetworkUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkUtils_Example/Pods-NetworkUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7F9B40EA21B43788001D8885 /* NetworkUtils.swift */,
+				7FB4AE3721B56F8900A290EA /* Reachability.swift */,
 			);
 			name = Classes;
 			path = ../NetworkUtils/Classes;
@@ -342,6 +345,7 @@
 			files = (
 				7F9B40EB21B43788001D8885 /* NetworkUtils.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				7FB4AE3821B56F8900A290EA /* Reachability.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
