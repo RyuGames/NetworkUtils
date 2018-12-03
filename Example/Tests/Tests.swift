@@ -22,7 +22,7 @@ class Tests: XCTestCase {
     
     func testHTTPGet() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
-        networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:]).then {(data) in
+        networkUtils.get("http://ip-api.com/json").then {(data) in
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 guard let status = json["status"] as? String else {
@@ -44,7 +44,7 @@ class Tests: XCTestCase {
     
     func testHTTPGetError() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
-        networkUtils.httpMethod(urlLink: "http://ip-apijson", method: .GET, params: [:]).then {(data) in
+        networkUtils.get("http://ip-api.com/json").then {(data) in
             XCTFail()
             expectation.fulfill()
             }.catch {(error) in

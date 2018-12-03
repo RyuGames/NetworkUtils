@@ -11,7 +11,23 @@ import Promises
 public class NetworkUtils: NSObject {
     public static let shared = NetworkUtils()
     
-    public func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any]) -> Promise<Data> {
+    public func post(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .POST, params: params)
+    }
+    
+    public func get(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .GET, params: params)
+    }
+    
+    public func put(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .PUT, params: params)
+    }
+    
+    public func delete(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .DELETE, params: params)
+    }
+    
+    private func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any]) -> Promise<Data> {
         let promise = Promise<Data> { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
@@ -68,10 +84,10 @@ public class NetworkUtils: NSObject {
     }
 }
 
-public struct networkError:Error {
+private struct networkError:Error {
     let msg : String
 }
 
-public enum httpMethodType:String {
+private enum httpMethodType:String {
     case POST, GET, PUT, DELETE
 }
