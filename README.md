@@ -30,16 +30,8 @@ And run ```pod install```.
 ```swift
 let networkUtils = NetworkUtils.shared
 
-networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:]).then {(data) in
-    do {
-        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-        guard let status = json["status"] as? String else {
-            return
-        }
-        print(status) // "success"
-    } catch let parseError as NSError {
-        print("JSON Error \(parseError.localizedDescription)")
-    }
+networkUtils.get("http://ip-api.com/json").then {(data) in
+    print("Data found: \(data)")
 }.catch {(error) in
     print("Error: \(error.localizedDescription)")
 }
