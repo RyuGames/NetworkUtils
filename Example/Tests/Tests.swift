@@ -20,7 +20,7 @@ class Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
-    func testHTTPGET() {
+    func testHTTPGet() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
         networkUtils.httpMethod(urlLink: "http://ip-api.com/json", method: .GET, params: [:]).then {(data) in
             do {
@@ -36,8 +36,20 @@ class Tests: XCTestCase {
             }
             expectation.fulfill()
         }.catch {(error) in
-            XCTFail(error.localizedDescription)
+            XCTFail("Error: \(error.localizedDescription)")
             expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testHTTPGetError() {
+        let expectation = XCTestExpectation(description: "HTTP GET request")
+        networkUtils.httpMethod(urlLink: "http://ip-apijson", method: .GET, params: [:]).then {(data) in
+            XCTFail()
+            expectation.fulfill()
+            }.catch {(error) in
+                print("Error: \(error.localizedDescription)")
+                expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
     }

@@ -45,27 +45,21 @@ public class NetworkUtils: NSObject {
             
             session.dataTask(with: request, completionHandler: {data, response, error -> Void in
                 if (error != nil){
-                    print("There was an error: \(error!.localizedDescription)")
                     reject(error!)
                 } else {
-                    if let httpResponse = response as? HTTPURLResponse {
-                        print("Received status code of \(httpResponse.statusCode)")
-                        if httpResponse.statusCode < 200 || httpResponse.statusCode >= 300 {
-                            if let outputStr  = String(data: data!, encoding: String.Encoding.utf8){
-                                reject(networkError(msg: outputStr))
-                            } else {
-                                reject(networkError(msg: "Failed with code \(httpResponse.statusCode)"))
-                            }
-                        } else {
-                            if data != nil {
-                                fulfill(data!)
-                            } else {
-                                reject(networkError(msg: "No data in response"))
-                            }
-                        }
-                    } else {
-                        print("Not valid response")
+                    guard let httpResponse = response as? HTTPURLResponse else {
                         reject(networkError(msg: "Invalid url response"))
+                        return
+                    }
+                    let statusCode = httpResponse.statusCode
+                    if statusCode < 200 || statusCode >= 300 {
+                        var errorMessage = "Failed with code \(statusCode)"
+                        if let additionalString  = String(data: data!, encoding: String.Encoding.utf8){
+                            errorMessage += " - \(additionalString)"
+                        }
+                        reject(networkError(msg: errorMessage))
+                    } else {
+                        fulfill(data!)
                     }
                 }
             }).resume()
