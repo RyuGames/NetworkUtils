@@ -1,4 +1,13 @@
-# NetworkUtils
+<p align="center">
+<img
+src="https://s3.amazonaws.com/ryu-logos/RyuIcon128x128.png"
+width="128px;">
+</p>
+
+<h1 align="center">NetworkUtils</h1>
+<p align="center">
+Swift package for handling HTTP requests
+</p>
 
 [![Version](https://img.shields.io/cocoapods/v/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 [![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
