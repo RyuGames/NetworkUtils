@@ -44,12 +44,12 @@ class Tests: XCTestCase {
     
     func testHTTPGetError() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
-        networkUtils.get("http://ip-api.com/json").then {(data) in
+        networkUtils.get("http://iadasdkdat.com").then {(data) in
             XCTFail()
             expectation.fulfill()
-            }.catch {(error) in
-                print("Error: \(error.localizedDescription)")
-                expectation.fulfill()
+        }.catch {(error) in
+            print("Error: \(error.localizedDescription)")
+            expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
     }

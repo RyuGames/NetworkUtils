@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='NetworkUtils_Tests.xctest' tests='3' failures='0'>
+  <testsuite name='NetworkUtils_Tests.Tests' tests='3' failures='0'>
+    <testcase classname='NetworkUtils_Tests.Tests' name='testExample' time='0.001'/>
+    <testcase classname='NetworkUtils_Tests.Tests' name='testHTTPGet' time='0.197'/>
+    <testcase classname='NetworkUtils_Tests.Tests' name='testHTTPGetError' time='0.008'/>
+  </testsuite>
+</testsuites>
