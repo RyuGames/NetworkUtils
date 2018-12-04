@@ -8,6 +8,8 @@
 import Foundation
 import Promises
 
+public let networkUtils = NetworkUtils.main
+
 public class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
     public static let reachability = Reachability.shared
