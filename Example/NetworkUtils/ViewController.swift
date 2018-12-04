@@ -11,9 +11,6 @@ import NetworkUtils
 
 class ViewController: UIViewController {
 
-    let networkUtils = NetworkUtils.main
-    let reachability = NetworkUtils.reachability
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -9,6 +9,7 @@ import Foundation
 import Promises
 
 public let networkUtils = NetworkUtils.main
+public let reachability = NetworkUtils.reachability
 
 public class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
