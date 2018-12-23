@@ -15,24 +15,24 @@ public class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
     public static let reachability = Reachability.shared
     
-    public func post(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
-        return httpMethod(urlLink: urlLink, method: .POST, params: params)
+    public func post(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .POST, params: params, retry: retry)
     }
     
-    public func get(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
-        return httpMethod(urlLink: urlLink, method: .GET, params: params)
+    public func get(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .GET, params: params, retry: retry)
     }
     
-    public func put(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
-        return httpMethod(urlLink: urlLink, method: .PUT, params: params)
+    public func put(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .PUT, params: params, retry: retry)
     }
     
-    public func delete(_ urlLink:String, _ params:[String:Any] = [:]) -> Promise<Data> {
-        return httpMethod(urlLink: urlLink, method: .DELETE, params: params)
+    public func delete(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
+        return httpMethod(urlLink: urlLink, method: .DELETE, params: params, retry: retry)
     }
     
-    private func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any]) -> Promise<Data> {
-        let promise = Promise<Data> { fulfill, reject in
+    private func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any], retry:Int) -> Promise<Data> {
+        return Promise<Data> { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
             let count = params.keys.count
@@ -65,7 +65,21 @@ public class NetworkUtils: NSObject {
             
             session.dataTask(with: request, completionHandler: {data, response, error -> Void in
                 if (error != nil){
-                    reject(error!)
+                    if retry > 0 {
+                        let code = (error! as NSError).code
+                        let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
+                        if retryErrors.contains(code){
+                            self.httpMethod(urlLink:urlLink, method:method, params:params, retry: retry - 1).then { (data) in
+                                fulfill(data)
+                            }.catch({ (error) in
+                                reject(error)
+                            })
+                        } else {
+                            reject(error!)
+                        }
+                    } else {
+                        reject(error!)
+                    }
                 } else {
                     guard let httpResponse = response as? HTTPURLResponse else {
                         reject(networkError(msg: "Invalid url response"))
@@ -84,7 +98,6 @@ public class NetworkUtils: NSObject {
                 }
             }).resume()
         }
-        return promise
     }
 }
 
