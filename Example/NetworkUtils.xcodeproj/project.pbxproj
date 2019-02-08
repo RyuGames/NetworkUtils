@@ -530,7 +530,7 @@
 				DEVELOPMENT_TEAM = 6RN58493KK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/**",
-					"$(inherited)/**",
+					"$(inherited)",
 					"$(PROJECT_DIR)/**",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -553,7 +553,7 @@
 				DEVELOPMENT_TEAM = 6RN58493KK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/**",
-					"$(inherited)/**",
+					"$(inherited)",
 					"$(PROJECT_DIR)/**",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
