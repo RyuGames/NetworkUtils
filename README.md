@@ -9,17 +9,18 @@ width="128px;">
 Swift package for handling HTTP requests
 </p>
 
+[![Build Status](https://travis-ci.com/Ryucoin/NetworkUtils.svg?branch=master)](https://travis-ci.com/Ryucoin/NetworkUtils)
 [![Version](https://img.shields.io/cocoapods/v/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 [![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](./LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 
 ## Author
 
-[WyattMufson](wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
+[WyattMufson](mailto:wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
 
 ## Overview
 
-NetworkUtils is a package for implementing HTTP network requests in Swift for iOS. The goal of the project is to replicate the funcitonality of the [axios](https://github.com/axios/axios) npm package used in nodejs.
+NetworkUtils is a package for implementing HTTP network requests in Swift for iOS. The goal of the project is to replicate the functionality of the [axios](https://github.com/axios/axios) npm package used in nodejs.
 
 It is built off of the [Foundation URL Loading System](https://developer.apple.com/documentation/foundation/url_loading_system) (similar to [Alamofire](https://github.com/Alamofire/Alamofire)). NetworkUtils uses Google's [Promises](https://github.com/google/promises) library for promise support.
 

@@ -2,7 +2,7 @@ default_platform(:ios)
 platform :ios do
 
   lane :tests do
-    run_tests(scheme: "NetworkUtils_Example",
+    run_tests(scheme: "NetworkUtils_Tests",
               workspace: "Example/NetworkUtils.xcworkspace")
   end
 end
