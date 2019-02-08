@@ -61,16 +61,3 @@ case .none:
     print("Not Reachable")
 }
 ```
-
-## Testing
-
-NetworkUtils uses [fastlane](https://fastlane.tools) for testing automation. Run the tests with:
-```
-fastlane tests
-```
-
-## Updating the Pod
-
-```
-pod trunk push NetworkUtils.podspec
-```
