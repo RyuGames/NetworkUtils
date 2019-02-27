@@ -14,9 +14,11 @@ Swift package for handling HTTP requests
 [![License](https://img.shields.io/cocoapods/l/NetworkUtils.svg?style=flat)](./LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NetworkUtils.svg?style=flat)](https://cocoapods.org/pods/NetworkUtils)
 
-## Author
-
-[WyattMufson](mailto:wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
+- [Overview](#overview)
+- [Installation](#installation)
+- [Example Usage](#example-usage)
+- [Author](#author)
+- [License](#license)
 
 ## Overview
 
@@ -38,18 +40,47 @@ And run ```pod install```.
 ## Example Usage
 
 ### HTTP Requests
-```swift
+
+Making an HTTP request with `NetworkUtils` is really simple. Use the `NetworkUtils.main` singleton object and one of the HTTP methods: `post`, `get`, `put` and `delete`.
+
+Here is an example HTTP GET request:
+
+``` swift
 let networkUtils = NetworkUtils.main
 
 networkUtils.get("http://ip-api.com/json").then {(data) in
-    print("Data found: \(data)")
+  print("Data found: \(data)")
 }.catch {(error) in
-    print("Error: \(error.localizedDescription)")
+  print("Error: \(error.localizedDescription)")
+}
+```
+
+#### Error Handling
+
+`NetworkUtils` offers a very basic subclass of `Error` named `NetworkError`:
+
+``` swift
+public struct NetworkError: Error {
+  public let msg: String
+  public let code: Int
+}
+```
+
+You can cast the returned `Error` to a `NetworkError` and access both of it's fields:
+
+``` swift
+}.catch {(err) in
+  let error = err as! NetworkError
+  let code = error.code
+  let msg = error.msg
 }
 ```
 
 ### Reachability
-```swift
+
+`NetworkUtils` also offers reachability services. Access reachability with `NetworkUtils.reachability` such as in the following example:
+
+``` swift
 let reachability = NetworkUtils.reachability
 
 switch reachability.connection {
@@ -61,3 +92,11 @@ case .none:
     print("Not Reachable")
 }
 ```
+
+## Author
+
+[WyattMufson](mailto:wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
+
+## License
+
+`NetworkUtils` is available under the [MIT license](./LICENSE).

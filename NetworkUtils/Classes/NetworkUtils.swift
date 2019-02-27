@@ -83,8 +83,10 @@ public class NetworkUtils: NSObject {
                     let statusCode = httpResponse.statusCode
                     if statusCode < 200 || statusCode >= 300 {
                         var errorMessage = ""
-                        if let additionalString  = String(data: data!, encoding: String.Encoding.utf8){
-                            errorMessage = additionalString
+                        if let d = data {
+                            if let additionalString  = String(data: d, encoding: .utf8){
+                                errorMessage = additionalString
+                            }
                         }
                         reject(NetworkError(msg: errorMessage, code: statusCode))
                     } else {
@@ -96,11 +98,11 @@ public class NetworkUtils: NSObject {
     }
 }
 
-public struct NetworkError:Error {
+public struct NetworkError: Error {
     public let msg: String
     public let code: Int
 }
 
-private enum httpMethodType:String {
+private enum httpMethodType: String {
     case POST, GET, PUT, DELETE
 }
