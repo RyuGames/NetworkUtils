@@ -1,9 +1,9 @@
 PODS:
   - NetworkUtils (0.1.4):
     - PromisesSwift
-  - PromisesObjC (1.2.6)
-  - PromisesSwift (1.2.6):
-    - PromisesObjC (= 1.2.6)
+  - PromisesObjC (1.2.7)
+  - PromisesSwift (1.2.7):
+    - PromisesObjC (= 1.2.7)
 
 DEPENDENCIES:
   - NetworkUtils (from `../`)
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   NetworkUtils: 1b648e2ea358e666bf163b82345d9f85c2ab220a
-  PromisesObjC: 60326422b6d692b9718a80666e67a9433862aa88
-  PromisesSwift: b3219d5e6545d5d7e8ad8038b4ad139f7ee0b3f0
+  PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
+  PromisesSwift: b27f410f9ea693753cfd4cfd8ac1c60a471f137b
 
 PODFILE CHECKSUM: fde2bb0b3165c5a513bfa186f765694de64766a2
 

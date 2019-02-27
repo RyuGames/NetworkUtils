@@ -2,22 +2,17 @@ import XCTest
 import NetworkUtils
 
 class Tests: XCTestCase {
-        
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
+
     func testHTTPGet() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
         networkUtils.get("http://ip-api.com/json").then {(data) in
@@ -33,20 +28,25 @@ class Tests: XCTestCase {
                 XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-        }.catch {(error) in
-            XCTFail("Error: \(error.localizedDescription)")
+        }.catch {(err) in
+            let error = err as! NetworkError
+            XCTFail("Error: \(error.msg)")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
     }
-    
+
     func testHTTPGetError() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
         networkUtils.get("http://iadasdkdat.com").then {(data) in
             XCTFail()
             expectation.fulfill()
-        }.catch {(error) in
-            print("Error: \(error.localizedDescription)")
+        }.catch {(err) in
+            let error = err as! NetworkError
+            let expectedMsg = "A server with the specified hostname could not be found."
+            let expecetdCode = -1003
+            XCTAssertEqual(expectedMsg, error.msg)
+            XCTAssertEqual(expecetdCode, error.code)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)

@@ -14,40 +14,41 @@ public let reachability = NetworkUtils.reachability
 public class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
     public static let reachability = Reachability.shared
-    
+    private let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
+
     public func post(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .POST, params: params, retry: retry)
     }
-    
+
     public func get(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .GET, params: params, retry: retry)
     }
-    
+
     public func put(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .PUT, params: params, retry: retry)
     }
-    
+
     public func delete(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .DELETE, params: params, retry: retry)
     }
-    
+
     private func httpMethod(urlLink:String, method:httpMethodType, params:[String:Any], retry:Int) -> Promise<Data> {
         return Promise<Data> { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
             let count = params.keys.count
-            
+
             if count > 0 {
                 if (method.rawValue == "POST" || method.rawValue == "PUT"){
                     request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
                 } else if (method.rawValue == "GET" || method.rawValue == "DELETE"){
                     var keys = Array(params.keys)
                     var queryItems : [URLQueryItem] = []
-                    
+
                     for i in 0..<count {
                         let name = keys[i]
                         let value = "\(params[name]!)"
-                        
+
                         let queryItem = URLQueryItem(name: name, value: value)
                         queryItems.append(queryItem)
                     }
@@ -56,42 +57,36 @@ public class NetworkUtils: NSObject {
                     request = URLRequest(url: urlComponents.url!)
                 }
             }
-            
+
             request.httpMethod = method.rawValue
-            
             let session = URLSession.shared
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
-            
+
             session.dataTask(with: request, completionHandler: {data, response, error -> Void in
-                if (error != nil){
-                    if retry > 0 {
-                        let code = (error! as NSError).code
-                        let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
-                        if retryErrors.contains(code){
-                            self.httpMethod(urlLink:urlLink, method:method, params:params, retry: retry - 1).then { (data) in
-                                fulfill(data)
-                            }.catch({ (error) in
-                                reject(error)
-                            })
-                        } else {
-                            reject(error!)
-                        }
+                if let err = error {
+                    let code = (err as NSError).code
+                    if self.retryErrors.contains(code) && retry > 0 {
+                        self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then { (data) in
+                            fulfill(data)
+                        }.catch({ (rerr) in
+                            reject(rerr)
+                        })
                     } else {
-                        reject(error!)
+                        reject(NetworkError(msg: err.localizedDescription, code: code))
                     }
                 } else {
                     guard let httpResponse = response as? HTTPURLResponse else {
-                        reject(networkError(msg: "Invalid url response"))
+                        reject(NetworkError(msg: "Invalid url response", code: -1))
                         return
                     }
                     let statusCode = httpResponse.statusCode
                     if statusCode < 200 || statusCode >= 300 {
-                        var errorMessage = "Failed with code \(statusCode)"
+                        var errorMessage = ""
                         if let additionalString  = String(data: data!, encoding: String.Encoding.utf8){
-                            errorMessage += " - \(additionalString)"
+                            errorMessage = additionalString
                         }
-                        reject(networkError(msg: errorMessage))
+                        reject(NetworkError(msg: errorMessage, code: statusCode))
                     } else {
                         fulfill(data!)
                     }
@@ -101,8 +96,9 @@ public class NetworkUtils: NSObject {
     }
 }
 
-private struct networkError:Error {
-    let msg : String
+public struct NetworkError:Error {
+    public let msg: String
+    public let code: Int
 }
 
 private enum httpMethodType:String {
