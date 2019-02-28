@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(reachabilityChanged(note:)),
                                                name: .reachabilityChanged, object: reachability)
@@ -38,6 +38,14 @@ class ViewController: UIViewController {
                 print("Not Reachable")
             }
         }
+    }
+
+    @IBAction func stop(_ sender: Any) {
+        reachability.stopNotifier()
+    }
+
+    @IBAction func description(_ sender: Any) {
+        print(reachability.description)
     }
 
     override func didReceiveMemoryWarning() {

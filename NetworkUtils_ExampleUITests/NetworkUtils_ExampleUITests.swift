@@ -10,19 +10,21 @@ import XCTest
 
 class NetworkUtils_ExampleUITests: XCTestCase {
     var app: XCUIApplication!
-    
+
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testLoading() {
+
+    func testReachability() {
         let expectation = XCTestExpectation(description: "Test loading")
+        XCUIApplication().buttons["Description"].tap()
+        XCUIApplication().buttons["Stop"].tap()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             expectation.fulfill()
         }
