@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             case .none:
                 print("Not Reachable")
             }
+            print(reachability.connection.description)
         }
     }
 
