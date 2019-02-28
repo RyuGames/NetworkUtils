@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import NetworkUtils
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +26,7 @@ class ViewController: UIViewController {
             print("could not start reachability notifier")
         }
     }
-    
+
     @objc func reachabilityChanged(note: Notification) {
         if let reachability = note.object as? Reachability {
             switch reachability.connection {
@@ -41,11 +39,9 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
-

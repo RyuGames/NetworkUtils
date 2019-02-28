@@ -4,9 +4,12 @@ osx_image: xcode10.1
 install:
   - gem install xcpretty
   - gem install cocoapods
-  - pod update --project-directory=Example
-  - pod install --project-directory=Example
+  - pod update
+  - pod install
 
 script:
-- xcodebuild clean build test -workspace Example/NetworkUtils.xcworkspace -scheme NetworkUtils_Tests -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.1' -sdk iphonesimulator12.1 CODE_SIGNING_REQUIRED=NO -configuration Debug ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES -enableCodeCoverage YES | xcpretty -c
 - pod lib lint
+- xcodebuild clean build test -workspace NetworkUtils.xcworkspace -scheme NetworkUtils_Tests -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.1' -sdk iphonesimulator12.1 CODE_SIGNING_REQUIRED=NO -configuration Debug ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES -enableCodeCoverage YES | xcpretty -c
+- bash <(curl -s https://codecov.io/bash) -cF unit -J NetworkUtils
+- xcodebuild clean build test -workspace NetworkUtils.xcworkspace -scheme NetworkUtils_Example -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.1' -sdk iphonesimulator12.1 CODE_SIGNING_REQUIRED=NO -configuration Debug ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES -enableCodeCoverage YES | xcpretty -c
+- bash <(curl -s https://codecov.io/bash) -cF ui -J NetworkUtils

@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "NetworkUtils_Example.app"
-               BlueprintName = "NetworkUtils_Example"
-               ReferencedContainer = "container:NetworkUtils.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "NetworkUtils_Tests.xctest"
                BlueprintName = "NetworkUtils_Tests"
@@ -97,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "NetworkUtils_Example.app"
-            BlueprintName = "NetworkUtils_Example"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "NetworkUtils_Tests.xctest"
+            BlueprintName = "NetworkUtils_Tests"
             ReferencedContainer = "container:NetworkUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
