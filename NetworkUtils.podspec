@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'WyattMufson' => 'wyatt@ryucoin.com' }
   s.source           = { :git => 'https://github.com/Ryucoin/NetworkUtils.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/officialryucoin'
+  s.social_media_url = 'https://twitter.com/_ryugames'
 
   s.ios.deployment_target = '12.0'
   s.swift_version = '4.2'
