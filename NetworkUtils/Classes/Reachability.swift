@@ -38,7 +38,7 @@ internal enum ReachabilityError: Error {
 }
 
 public extension Notification.Name {
-    public static let reachabilityChanged = Notification.Name("reachabilityChanged")
+    static let reachabilityChanged = Notification.Name("reachabilityChanged")
 }
 
 public class Reachability {
