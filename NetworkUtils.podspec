@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Swift package for handling HTTP requests'
   s.homepage         = 'https://github.com/Ryucoin/NetworkUtils'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'WyattMufson' => 'wyatt@ryucoin.com' }
+  s.author           = { 'WyattMufson' => 'wyatt@ryu.games' }
   s.source           = { :git => 'https://github.com/Ryucoin/NetworkUtils.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/_ryugames'
 

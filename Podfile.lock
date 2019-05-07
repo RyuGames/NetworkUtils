@@ -1,7 +1,7 @@
 PODS:
-  - PromisesObjC (1.2.7)
-  - PromisesSwift (1.2.7):
-    - PromisesObjC (= 1.2.7)
+  - PromisesObjC (1.2.8)
+  - PromisesSwift (1.2.8):
+    - PromisesObjC (= 1.2.8)
 
 DEPENDENCIES:
   - PromisesSwift
@@ -12,8 +12,8 @@ SPEC REPOS:
     - PromisesSwift
 
 SPEC CHECKSUMS:
-  PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
-  PromisesSwift: b27f410f9ea693753cfd4cfd8ac1c60a471f137b
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
 
 PODFILE CHECKSUM: 53465142373cb914b12bff1b3402b5b3fbcc387d
 
