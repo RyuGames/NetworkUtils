@@ -51,6 +51,24 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
 
+    func testLocalizedDescription() {
+        let expectation = XCTestExpectation(description: "Test localizedDescription")
+        networkUtils.get("localhost:3333/").then {(data) in
+            XCTFail()
+            expectation.fulfill()
+        }.catch {(err) in
+            let error = err as! NetworkError
+            let expectedMsg = "unsupported URL"
+            let expecetdCode = -1002
+            let expectedDescription = "There was a Network Error with code \(expecetdCode) and a message: \(expectedMsg)"
+            XCTAssertEqual(expectedMsg, error.msg)
+            XCTAssertEqual(expecetdCode, error.code)
+            XCTAssertEqual(expectedDescription, error.localizedDescription)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+
     func testRead() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
         networkUtils.get("http://ip-api.com/json", ["data":"data"]).then {(data) in

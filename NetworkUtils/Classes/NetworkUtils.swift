@@ -103,6 +103,9 @@ public final class NetworkUtils: NSObject {
 public struct NetworkError: Error {
     public let msg: String
     public let code: Int
+    public var localizedDescription: String {
+        return "There was a Network Error with code \(code) and a message: \(msg)"
+    }
 }
 
 private enum httpMethodType: String {
