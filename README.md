@@ -67,18 +67,24 @@ networkUtils.get("http://ip-api.com/json").then {(data) in
 public struct NetworkError: Error {
   public let msg: String
   public let code: Int
+  public var localizedDescription: String {
+    return "There was a Network Error with code \(code) and a message: \(msg)"
+  }
 }
 ```
 
-You can cast the returned `Error` to a `NetworkError` and access both of it's fields:
+You can cast the returned `Error` to a `NetworkError` and access both of its custom fields, plus its custom `localizedDescription`:
 
 ``` swift
 }.catch {(err) in
   let error = err as! NetworkError
   let code = error.code
   let msg = error.msg
+  let localizedDescription = error.localizedDescription
 }
 ```
+
+Note that `localizedDescription` will only change if you cast the generic `Error` to `NetworkError`.
 
 ### Reachability
 
@@ -99,7 +105,7 @@ case .none:
 
 ## Author
 
-[WyattMufson](mailto:wyatt@ryucoin.com) - cofounder of Ryu Blockchain Technologies
+[WyattMufson](mailto:wyatt@ryu.games) - cofounder of Ryu Games
 
 ## License
 
