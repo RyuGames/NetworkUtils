@@ -89,7 +89,26 @@ class Tests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
     }
-    
+
+    func testRetryWithError() {
+        let expectation = XCTestExpectation(description: "Test retry with error")
+        networkUtils.testing = true
+        networkUtils.get("http://iadasdkdat.com").then {(data) in
+            XCTFail()
+            networkUtils.testing = false
+            expectation.fulfill()
+        }.catch {(err) in
+            let error = err as! NetworkError
+            let expectedMsg = "A server with the specified hostname could not be found."
+            let expecetdCode = -1003
+            XCTAssertEqual(expectedMsg, error.msg)
+            XCTAssertEqual(expecetdCode, error.code)
+            networkUtils.testing = false
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+
     func testUpdateError() {
         let expectation = XCTestExpectation(description: "HTTP PUT request fail")
         networkUtils.put("http://ip-api.com/json", ["data":"data"]).then {(data) in

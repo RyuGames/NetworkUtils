@@ -11,10 +11,11 @@ import Promises
 public let networkUtils = NetworkUtils.main
 public let reachability = NetworkUtils.reachability
 
-public class NetworkUtils: NSObject {
+public final class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
     public static let reachability = Reachability.shared
     private let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
+    internal var testing: Bool = false
 
     public func post(_ urlLink:String, _ params:[String:Any] = [:], _ retry:Int = 3) -> Promise<Data> {
         return httpMethod(urlLink: urlLink, method: .POST, params: params, retry: retry)
@@ -63,23 +64,24 @@ public class NetworkUtils: NSObject {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
 
-            session.dataTask(with: request, completionHandler: {data, response, error -> Void in
-                if let err = error {
-                    let code = (err as NSError).code
-                    if self.retryErrors.contains(code) && retry > 0 {
+            session.dataTask(with: request, completionHandler: {(data, response, error) in
+                if let error = error {
+                    let code = (error as NSError).code
+                    if (self.retryErrors.contains(code) || self.testing) && retry > 0 {
                         self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then { (data) in
                             fulfill(data)
-                        }.catch({ (rerr) in
-                            reject(rerr)
+                        }.catch({ (err) in
+                            reject(err)
                         })
                     } else {
-                        reject(NetworkError(msg: err.localizedDescription, code: code))
+                        reject(NetworkError(msg: error.localizedDescription, code: code))
                     }
                 } else {
                     guard let httpResponse = response as? HTTPURLResponse else {
                         reject(NetworkError(msg: "Invalid url response", code: -1))
                         return
                     }
+
                     let statusCode = httpResponse.statusCode
                     if statusCode < 200 || statusCode >= 300 {
                         var errorMessage = ""
