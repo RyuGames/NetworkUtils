@@ -85,8 +85,8 @@ public final class NetworkUtils: NSObject {
                     let statusCode = httpResponse.statusCode
                     if statusCode < 200 || statusCode >= 300 {
                         var errorMessage = ""
-                        if let d = data {
-                            if let additionalString  = String(data: d, encoding: .utf8){
+                        if let data = data {
+                            if let additionalString  = String(data: data, encoding: .utf8){
                                 errorMessage = additionalString
                             }
                         }
