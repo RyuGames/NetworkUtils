@@ -69,6 +69,15 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
 
+    func testReachability() {
+        do {
+            try reachability.startNotifier()
+        } catch {
+            XCTFail("could not start reachability notifier")
+        }
+        print(reachability.description)
+    }
+
     func testRead() {
         let expectation = XCTestExpectation(description: "HTTP GET request")
         networkUtils.get("http://ip-api.com/json", ["data":"data"]).then {(data) in

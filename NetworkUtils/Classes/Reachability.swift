@@ -148,8 +148,9 @@ public class Reachability {
         let D = flags.isConnectionOnDemandFlagSet ? "D" : "-"
         let l = flags.isLocalAddressFlagSet ? "l" : "-"
         let d = flags.isDirectFlagSet ? "d" : "-"
+        let rt = flags.isConnectionRequiredAndTransientFlagSet ? "rt" : "-"
 
-        return "\(W)\(R) \(c)\(t)\(i)\(C)\(D)\(l)\(d)"
+        return "\(W)\(R) \(c)\(t)\(i)\(C)\(D)\(l)\(d)\(rt)"
     }
 
     fileprivate func setReachabilityFlags() throws {
@@ -209,33 +210,43 @@ extension SCNetworkReachabilityFlags {
         return false
         #endif
     }
+
     var isReachableFlagSet: Bool {
         return contains(.reachable)
     }
+
     var isConnectionRequiredFlagSet: Bool {
         return contains(.connectionRequired)
     }
+
     var isInterventionRequiredFlagSet: Bool {
         return contains(.interventionRequired)
     }
+
     var isConnectionOnTrafficFlagSet: Bool {
         return contains(.connectionOnTraffic)
     }
+
     var isConnectionOnDemandFlagSet: Bool {
         return contains(.connectionOnDemand)
     }
+
     var isConnectionOnTrafficOrDemandFlagSet: Bool {
         return !intersection([.connectionOnTraffic, .connectionOnDemand]).isEmpty
     }
+
     var isTransientConnectionFlagSet: Bool {
         return contains(.transientConnection)
     }
+
     var isLocalAddressFlagSet: Bool {
         return contains(.isLocalAddress)
     }
+
     var isDirectFlagSet: Bool {
         return contains(.isDirect)
     }
+
     var isConnectionRequiredAndTransientFlagSet: Bool {
         return intersection([.connectionRequired, .transientConnection]) == [.connectionRequired, .transientConnection]
     }
