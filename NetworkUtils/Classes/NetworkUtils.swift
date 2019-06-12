@@ -68,11 +68,11 @@ public final class NetworkUtils: NSObject {
                 if let error = error {
                     let code = (error as NSError).code
                     if (self.retryErrors.contains(code) || self.testing) && retry > 0 {
-                        self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then { (data) in
+                        self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then(on: .global()) { (data) in
                             fulfill(data)
-                        }.catch({ (err) in
+                        }.catch (on: .global()) { (err) in
                             reject(err)
-                        })
+                        }
                     } else {
                         reject(NetworkError(msg: error.localizedDescription, code: code))
                     }
