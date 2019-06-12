@@ -34,7 +34,7 @@ public final class NetworkUtils: NSObject {
     }
 
     private func httpMethod(urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, contentType: String = "application/json") -> Promise<Data> {
-        return Promise<Data> { fulfill, reject in
+        return Promise<Data>(on: .global()) { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
             let count = params.keys.count
