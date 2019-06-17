@@ -3,6 +3,7 @@
 //  NetworkUtils
 //
 //  Created by Wyatt Mufson on 12/3/18.
+//  Copyright © 2019 Ryu Blockchain Technologies. All rights reserved.
 //
 
 import Foundation

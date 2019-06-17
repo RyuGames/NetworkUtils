@@ -173,7 +173,6 @@
 				83F467E8786051FA2F14C2B9 /* Pods-NetworkUtils_Tests.debug.xcconfig */,
 				5D29F47EB54ACD86EC2FA92B /* Pods-NetworkUtils_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -273,7 +272,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = "Ryu Blockchain Technologies";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
