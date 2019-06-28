@@ -43,22 +43,15 @@ public extension Notification.Name {
 
 public class Reachability {
     public static let shared = Reachability()
-    public typealias NetworkReachable = (Reachability) -> ()
-    public typealias NetworkUnreachable = (Reachability) -> ()
 
-    public enum Connection: CustomStringConvertible {
-        case none, wifi, cellular
+    public enum Connection: String {
+        case none = "No Connection"
+        case wifi = "WiFi"
+        case cellular = "Ceullular"
         public var description: String {
-            switch self {
-            case .cellular: return "Cellular"
-            case .wifi: return "WiFi"
-            case .none: return "No Connection"
-            }
+            return self.rawValue
         }
     }
-
-    public var whenReachable: NetworkReachable?
-    public var whenUnreachable: NetworkUnreachable?
 
     // The notification center on which "reachability changed" events are being posted
     public var notificationCenter: NotificationCenter = NotificationCenter.default
@@ -165,10 +158,8 @@ public class Reachability {
     }
 
     fileprivate func reachabilityChanged() {
-        let block = connection != .none ? whenReachable : whenUnreachable
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            block?(self)
             self.notificationCenter.post(name: .reachabilityChanged, object: self)
         }
     }
