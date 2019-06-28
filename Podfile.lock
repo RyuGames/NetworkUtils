@@ -1,16 +1,16 @@
 PODS:
-  - SwiftPromises (0.0.3)
+  - SwiftPromises (0.0.4)
 
 DEPENDENCIES:
-  - SwiftPromises (= 0.0.3)
+  - SwiftPromises (= 0.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SwiftPromises
 
 SPEC CHECKSUMS:
-  SwiftPromises: b1ca651edb7f8aeb59989afc1c3102301826acb8
+  SwiftPromises: 390246636d7e213d0a5beb03f62d5603c795b117
 
-PODFILE CHECKSUM: 9e1aa36782d9f31561d091dd46e865c20d5502f2
+PODFILE CHECKSUM: a8b36c2fbed74cd4a65938af8cb4bd06628675b3
 
 COCOAPODS: 1.6.1
