@@ -1,9 +1,10 @@
 use_frameworks!
 platform :ios, '12.0'
+
 target 'NetworkUtils_Example' do
-  pod 'PromisesSwift'
+  pod 'SwiftPromises'
 end
 
 target 'NetworkUtils_Tests' do
-    pod 'PromisesSwift'
+  pod 'SwiftPromises'
 end

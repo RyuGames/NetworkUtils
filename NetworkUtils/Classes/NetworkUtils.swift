@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Promises
+import SwiftPromises
 
 public let networkUtils = NetworkUtils.main
 public let reachability = NetworkUtils.reachability
@@ -35,7 +35,7 @@ public final class NetworkUtils: NSObject {
     }
 
     private func httpMethod(urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, contentType: String = "application/json") -> Promise<Data> {
-        return Promise<Data>(on: .global()) { fulfill, reject in
+        return Promise<Data> { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
             let count = params.keys.count
@@ -69,9 +69,9 @@ public final class NetworkUtils: NSObject {
                 if let error = error {
                     let code = (error as NSError).code
                     if (self.retryErrors.contains(code) || self.testing) && retry > 0 {
-                        self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then(on: .global()) { (data) in
+                        self.httpMethod(urlLink: urlLink, method: method, params: params, retry: retry - 1).then { (data) in
                             fulfill(data)
-                        }.catch (on: .global()) { (err) in
+                        }.catch { (err) in
                             reject(err)
                         }
                     } else {
