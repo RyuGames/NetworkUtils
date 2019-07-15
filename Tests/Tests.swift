@@ -101,6 +101,29 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
 
+    func testReadDispatchQueue() {
+        let expectation = XCTestExpectation(description: "HTTP GET request on queue")
+        networkUtils.get(dispatchQueue: .global(qos: .userInitiated), "http://ip-api.com/json", ["data":"data"]).then {(data) in
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                guard let status = json["status"] as? String else {
+                    XCTFail()
+                    expectation.fulfill()
+                    return
+                }
+                XCTAssert(status == "success")
+            } catch let parseError as NSError {
+                XCTFail("JSON Error \(parseError.localizedDescription)")
+            }
+            expectation.fulfill()
+            }.catch {(err) in
+                let error = err as! NetworkError
+                XCTFail("Error: \(error.msg)")
+                expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+
     func testReadError() {
         let expectation = XCTestExpectation(description: "HTTP GET request fail")
         networkUtils.get("http://iadasdkdat.com").then {(data) in
