@@ -18,23 +18,23 @@ public final class NetworkUtils: NSObject {
     private let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
     internal var testing: Bool = false
 
-    public func post(dispatchQueue: DispatchQueue = promiseQueue, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
+    public func post(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .POST, params: params, retry: retry, contentType: contentType)
     }
 
-    public func get(dispatchQueue: DispatchQueue = promiseQueue, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
+    public func get(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .GET, params: params, retry: retry)
     }
 
-    public func put(dispatchQueue: DispatchQueue = promiseQueue, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
+    public func put(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .PUT, params: params, retry: retry, contentType: contentType)
     }
 
-    public func delete(dispatchQueue: DispatchQueue = promiseQueue, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
+    public func delete(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .DELETE, params: params, retry: retry)
     }
 
-    private func httpMethod(dispatchQueue: DispatchQueue, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, contentType: String = "application/json") -> Promise<Data> {
+    private func httpMethod(dispatchQueue: DispatchQueue?, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, contentType: String = "application/json") -> Promise<Data> {
         return Promise<Data>(dispatchQueue: dispatchQueue) { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)

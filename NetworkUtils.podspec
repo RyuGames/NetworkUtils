@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.swift_version = '5'
   s.source_files = 'NetworkUtils/Classes/**/*'
-  s.dependency 'SwiftPromises', '0.0.4'
+  s.dependency 'SwiftPromises', '0.1.0'
 end
