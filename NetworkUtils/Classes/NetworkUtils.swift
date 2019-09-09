@@ -12,29 +12,31 @@ import SwiftPromises
 public let networkUtils = NetworkUtils.main
 public let reachability = NetworkUtils.reachability
 
+public let NUDefaultHeaders: [String: String] = ["Content-Type": "application/json", "Accept": "application/json"]
+
 public final class NetworkUtils: NSObject {
     public static let main = NetworkUtils()
     public static let reachability = Reachability.shared
     private let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
     internal var testing: Bool = false
 
-    public func post(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
-        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .POST, params: params, retry: retry, contentType: contentType)
+    public func post(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .POST, params: params, retry: retry, headers: headers)
     }
 
-    public func get(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
-        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .GET, params: params, retry: retry)
+    public func get(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .GET, params: params, retry: retry, headers: headers)
     }
 
-    public func put(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, _ contentType: String = "application/json") -> Promise<Data> {
-        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .PUT, params: params, retry: retry, contentType: contentType)
+    public func put(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .PUT, params: params, retry: retry, headers: headers)
     }
 
-    public func delete(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3) -> Promise<Data> {
-        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .DELETE, params: params, retry: retry)
+    public func delete(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+        return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .DELETE, params: params, retry: retry, headers: headers)
     }
 
-    private func httpMethod(dispatchQueue: DispatchQueue?, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, contentType: String = "application/json") -> Promise<Data> {
+    private func httpMethod(dispatchQueue: DispatchQueue?, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, headers: [String: String]) -> Promise<Data> {
         return Promise<Data>(dispatchQueue: dispatchQueue) { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
@@ -62,14 +64,15 @@ public final class NetworkUtils: NSObject {
 
             request.httpMethod = method.rawValue
             let session = URLSession.shared
-            request.addValue(contentType, forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            for header in headers {
+                request.addValue(header.value, forHTTPHeaderField: header.key)
+            }
 
             session.dataTask(with: request, completionHandler: {(data, response, error) in
                 if let error = error {
                     let code = (error as NSError).code
                     if (self.retryErrors.contains(code) || self.testing) && retry > 0 {
-                        self.httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: method, params: params, retry: retry - 1).then { (data) in
+                        self.httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: method, params: params, retry: retry - 1, headers: headers).then { (data) in
                             fulfill(data)
                         }.catch { (err) in
                             reject(err)
