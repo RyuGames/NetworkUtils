@@ -118,12 +118,21 @@ public struct NetworkError: Error {
         }
         return error.error
     }
+
+    public init(msg: String, code: Int) {
+        self.msg = msg
+        self.code = code
+    }
 }
 
 public struct ServerError: Codable {
     public var error: String
     public var errorDict: [String: String] {
         return ["error": error]
+    }
+
+    public init(error: String) {
+        self.error = error
     }
 }
 
