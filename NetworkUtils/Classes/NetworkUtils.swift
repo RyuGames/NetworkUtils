@@ -56,6 +56,7 @@ public final class NetworkUtils: NSObject {
                         let queryItem = URLQueryItem(name: name, value: value)
                         queryItems.append(queryItem)
                     }
+
                     var urlComponents = URLComponents(string: urlLink)!
                     urlComponents.queryItems = queryItems
                     request = URLRequest(url: urlComponents.url!)
@@ -68,7 +69,7 @@ public final class NetworkUtils: NSObject {
                 request.addValue(header.value, forHTTPHeaderField: header.key)
             }
 
-            session.dataTask(with: request, completionHandler: {(data, response, error) in
+            session.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     let code = (error as NSError).code
                     if (self.retryErrors.contains(code) || self.testing) && retry > 0 {
@@ -89,17 +90,15 @@ public final class NetworkUtils: NSObject {
                     let statusCode = httpResponse.statusCode
                     if statusCode < 200 || statusCode >= 300 {
                         var errorMessage = ""
-                        if let data = data {
-                            if let additionalString  = String(data: data, encoding: .utf8){
-                                errorMessage = additionalString
-                            }
+                        if let data = data, let additionalString = String(data: data, encoding: .utf8){
+                            errorMessage = additionalString
                         }
                         reject(NetworkError(msg: errorMessage, code: statusCode))
                     } else {
                         fulfill(data!)
                     }
                 }
-            }).resume()
+            }.resume()
         }
     }
 }
@@ -116,6 +115,7 @@ public struct NetworkError: Error {
             let error = try? JSONDecoder().decode(ServerError.self, from: data) else {
                 return msg
         }
+
         return error.error
     }
 
