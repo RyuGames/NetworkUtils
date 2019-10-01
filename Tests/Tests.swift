@@ -64,6 +64,7 @@ class Tests: XCTestCase {
             XCTAssertEqual(expectedMsg, error.msg)
             XCTAssertEqual(expecetdCode, error.code)
             XCTAssertEqual(expectedDescription, error.localizedDescription)
+            XCTAssertEqual(expectedMsg, error.errorMessage)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
