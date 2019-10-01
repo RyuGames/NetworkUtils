@@ -27,8 +27,7 @@ class Tests: XCTestCase {
                 XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             XCTFail("Error: \(error.msg)")
             expectation.fulfill()
         }
@@ -40,8 +39,7 @@ class Tests: XCTestCase {
         networkUtils.delete("http://ip-api.com/json", ["data":"data"]).then {(data) in
             XCTFail()
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             let expectedMsg = "Method Not Allowed"
             let expectedCode = 405
             XCTAssertTrue(error.msg.starts(with: expectedMsg))
@@ -56,8 +54,7 @@ class Tests: XCTestCase {
         networkUtils.get("localhost:3333/").then {(data) in
             XCTFail()
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             let expectedMsg = "unsupported URL"
             let expecetdCode = -1002
             let expectedDescription = "There was a Network Error with code \(expecetdCode) and a message: \(expectedMsg)"
@@ -111,8 +108,7 @@ class Tests: XCTestCase {
                 XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             XCTFail("Error: \(error.msg)")
             expectation.fulfill()
         }
@@ -134,8 +130,7 @@ class Tests: XCTestCase {
                 XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             XCTFail("Error: \(error.msg)")
             expectation.fulfill()
         }
@@ -147,8 +142,7 @@ class Tests: XCTestCase {
         networkUtils.get("http://iadasdkdat.com").then {(data) in
             XCTFail()
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             let expectedMsg = "A server with the specified hostname could not be found."
             let expecetdCode = -1003
             XCTAssertEqual(expectedMsg, error.msg)
@@ -165,8 +159,7 @@ class Tests: XCTestCase {
             XCTFail()
             networkUtils.testing = false
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             let expectedMsg = "A server with the specified hostname could not be found."
             let expecetdCode = -1003
             XCTAssertEqual(expectedMsg, error.msg)
@@ -182,8 +175,7 @@ class Tests: XCTestCase {
         networkUtils.put("http://ip-api.com/json", ["data":"data"]).then {(data) in
             XCTFail()
             expectation.fulfill()
-        }.catch {(err) in
-            let error = err as! NetworkError
+        }.catch {(error) in
             let expectedMsg = "Method Not Allowed"
             let expectedCode = 405
             XCTAssertTrue(error.msg.starts(with: expectedMsg))

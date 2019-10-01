@@ -12,6 +12,8 @@ import SwiftPromises
 public let networkUtils = NetworkUtils.main
 public let reachability = NetworkUtils.reachability
 
+public typealias NUPromise<Value> = BasePromise<Value, NetworkError>
+
 public let NUDefaultHeaders: [String: String] = ["Content-Type": "application/json", "Accept": "application/json"]
 
 public final class NetworkUtils: NSObject {
@@ -20,24 +22,24 @@ public final class NetworkUtils: NSObject {
     private let retryErrors = [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet, NSURLErrorTimedOut]
     internal var testing: Bool = false
 
-    public func post(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+    public func post(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> NUPromise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .POST, params: params, retry: retry, headers: headers)
     }
 
-    public func get(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+    public func get(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> NUPromise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .GET, params: params, retry: retry, headers: headers)
     }
 
-    public func put(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+    public func put(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> NUPromise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .PUT, params: params, retry: retry, headers: headers)
     }
 
-    public func delete(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> Promise<Data> {
+    public func delete(dispatchQueue: DispatchQueue? = nil, _ urlLink: String, _ params: [String: Any] = [:], _ retry: Int = 3, headers: [String: String] = NUDefaultHeaders) -> NUPromise<Data> {
         return httpMethod(dispatchQueue: dispatchQueue, urlLink: urlLink, method: .DELETE, params: params, retry: retry, headers: headers)
     }
 
-    private func httpMethod(dispatchQueue: DispatchQueue?, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, headers: [String: String]) -> Promise<Data> {
-        return Promise<Data>(dispatchQueue: dispatchQueue) { fulfill, reject in
+    private func httpMethod(dispatchQueue: DispatchQueue?, urlLink: String, method: httpMethodType, params: [String: Any], retry: Int, headers: [String: String]) -> NUPromise<Data> {
+        return NUPromise<Data>(dispatchQueue: dispatchQueue) { fulfill, reject in
             let url = URL(string: urlLink)
             var request = URLRequest(url: url!)
             let count = params.keys.count
