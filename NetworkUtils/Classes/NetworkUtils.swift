@@ -46,7 +46,7 @@ public final class NetworkUtils: NSObject {
                 if (method.rawValue == "POST" || method.rawValue == "PUT"){
                     request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
                 } else if (method.rawValue == "GET" || method.rawValue == "DELETE"){
-                    var keys = Array(params.keys)
+                    let keys = Array(params.keys)
                     var queryItems : [URLQueryItem] = []
 
                     for i in 0..<count {
@@ -109,6 +109,21 @@ public struct NetworkError: Error {
     public let code: Int
     public var localizedDescription: String {
         return "There was a Network Error with code \(code) and a message: \(msg)"
+    }
+
+    public var errorMessage: String {
+        guard let data = msg.data(using: .utf8),
+            let error = try? JSONDecoder().decode(ServerError.self, from: data) else {
+                return msg
+        }
+        return error.error
+    }
+}
+
+public struct ServerError: Codable {
+    public var error: String
+    public var errorDict: [String: String] {
+        return ["error": error]
     }
 }
 

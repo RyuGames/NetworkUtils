@@ -69,6 +69,23 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
 
+    func testNetworkErrorParsing() {
+        let errorMessage = "There was an error!"
+        let serverError = ServerError(error: errorMessage)
+        let errorDict: [String: String] = serverError.errorDict
+        guard let errorData = try? JSONSerialization.data(withJSONObject: errorDict, options: []),
+            let errorString = String(data: errorData, encoding: .utf8) else {
+            XCTFail()
+            return
+        }
+
+        let errorCode = 500
+        let networkError = NetworkError(msg: errorString, code: errorCode)
+        XCTAssertEqual(networkError.code, errorCode)
+        XCTAssertEqual(networkError.msg, errorString)
+        XCTAssertEqual(networkError.errorMessage, errorMessage)
+    }
+
     func testReachability() {
         do {
             try reachability.startNotifier()
@@ -116,10 +133,10 @@ class Tests: XCTestCase {
                 XCTFail("JSON Error \(parseError.localizedDescription)")
             }
             expectation.fulfill()
-            }.catch {(err) in
-                let error = err as! NetworkError
-                XCTFail("Error: \(error.msg)")
-                expectation.fulfill()
+        }.catch {(err) in
+            let error = err as! NetworkError
+            XCTFail("Error: \(error.msg)")
+            expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
     }
