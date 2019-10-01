@@ -73,18 +73,15 @@ public struct NetworkError: Error {
 }
 ```
 
-You can cast the returned `Error` to a `NetworkError` and access both of its custom fields, plus its custom `localizedDescription`:
+Catch will reject with a `NetworkError`:
 
 ``` swift
-}.catch {(err) in
-  let error = err as! NetworkError
+}.catch {(error) in
   let code = error.code
   let msg = error.msg
   let localizedDescription = error.localizedDescription
 }
 ```
-
-Note that `localizedDescription` will only change if you cast the generic `Error` to `NetworkError`.
 
 ### Reachability
 
