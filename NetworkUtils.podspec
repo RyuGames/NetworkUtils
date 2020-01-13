@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NetworkUtils'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Swift package for handling HTTP requests'
   s.homepage         = 'https://github.com/RyuGames/NetworkUtils'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
