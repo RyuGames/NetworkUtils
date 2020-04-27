@@ -85,6 +85,8 @@ Catch will reject with a `NetworkError`:
 
 ### Await
 
+To use `await`:
+
 ```
 let result = await(promise)
 ```
