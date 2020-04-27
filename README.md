@@ -83,6 +83,12 @@ Catch will reject with a `NetworkError`:
 }
 ```
 
+### Await
+
+```
+let result = await(promise)
+```
+
 ### Reachability
 
 `NetworkUtils` also offers reachability services. Access reachability with `NetworkUtils.reachability` such as in the following example:
