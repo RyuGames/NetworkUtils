@@ -1,16 +1,16 @@
 PODS:
-  - SwiftPromises (2.0.0)
+  - SwiftPromises (2.0.1)
 
 DEPENDENCIES:
-  - SwiftPromises (= 2.0.0)
+  - SwiftPromises (= 2.0.1)
 
 SPEC REPOS:
   trunk:
     - SwiftPromises
 
 SPEC CHECKSUMS:
-  SwiftPromises: 9dcac22fad4fd7221fe413d69682228cde84a9a1
+  SwiftPromises: 3aa93bea7504d31e63140a6601a5d505244a8cbc
 
-PODFILE CHECKSUM: 4ce5218cc9a01524947517306f8138e256fa49fe
+PODFILE CHECKSUM: f9136cbcb3970441a7978ce3576c241313e818c7
 
 COCOAPODS: 1.10.1
