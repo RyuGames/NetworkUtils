@@ -3,7 +3,7 @@
 //  NetworkUtils_ExampleUITests
 //
 //  Created by Wyatt Mufson on 2/27/19.
-//  Copyright © 2020 Ryu Blockchain Technologies. All rights reserved.
+//  Copyright © 2021 Ryu Games. All rights reserved.
 //
 
 import XCTest
